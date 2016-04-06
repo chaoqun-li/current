@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我秀详情页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" type="text/css" href="icon-fonts/style.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript">
+    new function (){
+       var _self = this;
+       _self.width = 640;
+       _self.fontSize = 100;
+       _self.widthProportion = function(){var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.32?0.32:p;};
+       _self.changePage = function(){
+           document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+       }
+       _self.changePage(); 
+       window.addEventListener('resize',function(){_self.changePage();},false);
+    };
+	</script>
+</head>
+<body>
+	<!--头部-->
+	<div class="header">
+		<a href="show_topic.html"><i class="icon-but-back"></i></a>
+		<img src="images/logo.png" alt="郑州晚报">
+		<h1 class="head-tit"></h1>
+	</div>	
+	<!--我秀话题详情-->
+	<div class="show-list">
+		<div class="show-hd">
+			<img src="images/touxiang.jpg" alt="头像">
+		</div>
+		<div class="show-name">
+			<h1>仙都哟又浅
+				<a href="javascript:;" class="zhan"><span>0</span><i class="icon-icon-zan"></i></a>
+				<a href="javascript:;"><i class="icon-icon-pinglun"></i></a>
+				<a href="javascript:;"><i class="icon-but-fenxiang"></i></a>
+			</h1>
+			<span>03-02 22:20</span>
+			<div class="clear"></div>
+		</div>
+		<div class="show-content">
+			<p class="show-tit">#hello三月#</p>
+			<span>乍暖还寒春意浓，春天来了，桃花朵朵开开哈哈哈哈啊哈哈。</span>
+		</div>
+		<div class="clear"></div>
+		<div class="show-pics">
+			<table class="list-pics">
+				<tr>
+					<td><img src="images/show-pic2.jpg"></td>
+					<td><img src="images/show-pic3.jpg"></td>
+					<td><img src="images/show-pic3.jpg"></td>
+				</tr>
+				<tr>
+					<td><img src="images/show-pic2.jpg"></td>
+					<td><img src="images/show-pic3.jpg"></td>
+					<td><img src="images/show-pic3.jpg"></td>
+				</tr>
+			</table>
+		</div>
+		<!--评论-->
+		<div class="comments-div comments">
+			<h1 class="com-tit">评论580</h1>
+			<div class="com-lists">
+				<ul>
+					<li>
+						<div class="hd"><img src="images/touxiang2.jpg" alt="评论头像"></div>
+						<div class="com-con">
+							<div class="com-name">
+								<h1>L_ilovecy</h1>
+								<span>03-02 22:20</span>
+							</div>
+							<p>关注你这么久，竟然以增热搜索的形式出现了他的名字。</p>
+						</div>
+					</li>
+					<li>
+						<div class="hd"><img src="images/touxiang3.jpg" alt="评论头像"></div>
+						<div class="com-con">
+							<div class="com-name">
+								<h1>仙都哟又浅</h1>
+								<span>03-02 22:20</span>
+							</div>
+							<p>关注你这么久，竟然以增热搜索。</p>
+						</div>
+					</li>
+					<li>
+						<div class="hd"><img src="images/touxiang4.jpg" alt="评论头像"></div>
+						<div class="com-con">
+							<div class="com-name">
+								<h1>小青蛙变成了丸子</h1>
+								<span>03-02 22:20</span>
+							</div>
+							<p>关注你这么久，竟然以增热搜索的形式出现了他的名字。</p>
+						</div>
+					</li>
+					<li>
+						<div class="hd"><img src="images/touxiang4.jpg" alt="评论头像"></div>
+						<div class="com-con">
+							<div class="com-name">
+								<h1>小青蛙变成了丸子</h1>
+								<span>03-02 22:20</span>
+							</div>
+							<p>关注你这么久，竟然以增热搜索的形式出现了他的名字。</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--评论框-->
+	<footer class="footer">
+		<form action="" method="post">
+		    <div class="pinglun-bar">
+		        <input type="text" class="pinglun_key" placeholder="评论">
+		        <button type="submit">发送</button>
+		    </div>
+		</form>
+	</footer>
+	<!--  zan JS--> 
+<script type="text/javascript">
+  $(document).ready(function (e) {
+     $('a.zhan').click(function () {
+         var left = parseInt($(this).offset().left) + 10,
+             top = parseInt($(this).offset().top) - 10,
+             obj = $(this);
+         $(this).append('<div class="zhans"><b>+1<\/b></\div>');
+         $('.zhans').css({
+             'position': 'absolute',
+             'z-index': '1',
+             'color': '#C30',
+             'left': '4rem',
+             'top': top + 'px'
+         }).animate({
+             top: top - 10,
+             left: left + 10
+         }, 'slow', function () {
+             $(this).fadeIn('fast').remove();
+             var Num = parseInt(obj.find('span').text());
+             Num++;
+             obj.find('span').text(Num);
+         });
+         return false; 
+     });
+     $('a.zhan').bind('click', function() {
+       $(this).unbind('click');
+		});
+  
+ });
+ </script> 
+</body>
+</html>

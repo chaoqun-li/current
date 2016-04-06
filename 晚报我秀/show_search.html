@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我秀搜索页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" type="text/css" href="icon-fonts/style.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript">
+    new function (){
+       var _self = this;
+       _self.width = 640;
+       _self.fontSize = 100;
+       _self.widthProportion = function(){var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.32?0.32:p;};
+       _self.changePage = function(){
+           document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+       }
+       _self.changePage(); 
+       window.addEventListener('resize',function(){_self.changePage();},false);
+    };
+	</script>
+</head>
+<body>
+	<!--头部-->
+	<div class="header">
+		<a href="show_index.html"><i class="icon-but-back"></i></a>
+		<img src="images/logo.png" alt="郑州晚报">
+		<h1 class="head-tit"></h1>
+	</div>
+	<!--搜索-->
+	<div class="sousuo">
+		<form action="" method="post">
+		    <div class="search">
+		        <input type="text" class="search_key" placeholder="热门搜索">
+		        <button type="submit"><i class="icon-icon_sousuo"></i></button>
+		    </div>
+		    <span class="cancel"><a href="show_index.html">取消</a></span>
+		    <div class="clear"></div>
+		</form>
+		<div class="search-tit">
+			<p class="search-tit1"><a href="show_topic.html">#hello三月#</a></p>
+			<p class="search-tit2"><a href="show_topic.html">#好玩郑州#</a></p>
+			<p class="search-tit1"><a href="show_topic.html">#我要上猜图#</a></p>
+			<p class="search-tit2"><a href="show_topic.html">#给ta的一封明信片#</a></p>
+			<p class="search-tit1"><a href="show_topic.html">#hello三月#</a></p>
+			<p class="search-tit2"><a href="show_topic.html">#好玩郑州#</a></p>
+			<p class="search-tit1"><a href="show_topic.html">#我要上猜图#</a></p>
+			<p class="search-tit2"><a href="show_topic.html">#给ta的一封明信片#</a></p>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+</body>
+</html>

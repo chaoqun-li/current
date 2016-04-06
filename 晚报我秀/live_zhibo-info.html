@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实况直播页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" type="text/css" href="icon-fonts/style.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript">
+    new function (){
+       var _self = this;
+       _self.width = 640;
+       _self.fontSize = 100;
+       _self.widthProportion = function(){var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.32?0.32:p;};
+       _self.changePage = function(){
+           document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+       }
+       _self.changePage(); 
+       window.addEventListener('resize',function(){_self.changePage();},false);
+    };
+	</script>
+</head>
+<body style="background-color:#fff">
+	<!--头部-->
+	<div class="header">
+		<a href="live_index.html"><i class="icon-but-back"></i></a>
+		<img src="images/logo.png" alt="郑州晚报">
+		<a href="javascript:;"><i class="icon-but-fenxiang"></i></a>
+		<a href="javascript:;"><i class="icon-icon-pinglun">2306</i></a>
+	</div>
+	<!--导航层-->
+	<div class="live-nav">
+		<a href="javascript:;" class="nav-live2">实况直播</a>
+		<a href="live_taolun-info.html" class="nav-live">讨论空间</a>
+	</div>
+	<!--直播主题-->
+	<div class="zhibo-container">
+		<div class="zhibo-banner">
+			<img src="images/zhibo-pic1.jpg" alt="直播">
+			<div class="zhibo-tit">河南省新闻摄影年度交流会</div>
+		</div>
+		<div class="zhibo-content">
+			<p class="zhibo-time">郑州晚报 2016/03/02 06:53</p>
+			<p class="zhibo-words">来自商丘日报的同仁正在分享“美丽商丘”活动心得以往摄影专版多是摄影记者跟蚊子作者分头作战，而商丘日报《美丽商丘俺的家》则从活动策划伊始就确定摄影记者们。来自商丘日报的同仁正在分享“美丽商丘”活动心得以往摄影专版多是摄影记者。</p>
+		</div>
+		<div class="zhibo-list">
+			<div class="zhibo-left">
+				<div class="small-circle"></div>
+				<h1 class="left-line"></h1>
+				<div class="large-circle">
+					<img src="images/touxiang.jpg" alt="直播头像">
+				</div>
+				<p class="touxiang-name">Amy</p>
+			</div>
+			<div class="zhibo-right">
+				<h1 class="right-time">2016-01-30 15:09:59</h1>
+				<p>欢迎大家来到本次直播间，即将为大家带来的诗文摄影交流会的现场报道。</p>
+			</div>
+			<h1 class="left-line2"></h1>
+			<!--直播文字叙述部分-->
+			<div class="zhibo-left">
+				<div class="small-circle"></div>
+				<span class="right-time2">2016-01-30 15:08:20</span>
+			</div>
+			<div class="zhibo-long">
+				来自商丘日报的同仁正在分享美丽商丘活动心得以往摄影专版多是摄影记者跟文子作者分头作战，而商丘日报《美丽商丘俺的家》则从活动策划伊始就确定摄影记者们。来自商丘日报的同仁正在分享“美丽商丘”活动心得以往摄影专版多是摄影记者。
+				<div class="zhibo-yinyong">
+					<h2 class="yinyong-tit">引用“一颗可爱的团子”的发言</h2>
+					<p>以往摄影专版多是摄影记者跟文字作者分头作战，而商丘日报《美丽商丘俺的家》。</p>
+				</div>
+			</div>
+			<!--直播文字叙述部分(重复)-->
+			<div class="zhibo-left">
+				<div class="small-circle"></div>
+				<span class="right-time2">2016-01-30 15:08:20</span>
+			</div>
+			<div class="zhibo-long">
+				来自商丘日报的同仁正在分享美丽商丘活动心得以往摄影专版多是摄影记者跟文子作者分头作战，而商丘日报《美丽商丘俺的家》则从活动策划伊始就确定摄影记者们。来自商丘日报的同仁正在分享“美丽商丘”活动心得以往摄影专版多是摄影记者。
+				<div class="zhibo-yinyong">
+					<h2 class="yinyong-tit">引用“一颗可爱的团子”的发言</h2>
+					<p>以往摄影专版多是摄影记者跟文字作者分头作战，而商丘日报《美丽商丘俺的家》。</p>
+				</div>
+			</div>
+			<!--直播多图列表部分-->
+			<div class="zhibo-left">
+				<div class="small-circle"></div>
+				<span class="right-time2">2016-01-30 15:08:20</span>
+			</div>
+			<div class="zhibo-duotu">
+				<ul>
+					<li><img src="images/zhibo-pic2.jpg" alt="直播"></li>
+					<li><img src="images/zhibo-pic3.jpg" alt="直播"></li>
+					<li><img src="images/zhibo-pic4.jpg" alt="直播"></li>
+				</ul>
+			</div>
+			<!--直播多图列表部分(重复)-->
+			<div class="zhibo-left">
+				<div class="small-circle"></div>
+				<span class="right-time2">2016-01-30 15:08:20</span>
+			</div>
+			<div class="zhibo-duotu">
+				<ul>
+					<li><img src="images/zhibo-pic2.jpg" alt="直播"></li>
+					<li><img src="images/zhibo-pic3.jpg" alt="直播"></li>
+					<li><img src="images/zhibo-pic4.jpg" alt="直播"></li>
+					<li><img src="images/zhibo-pic4.jpg" alt="直播"></li>
+				</ul>
+			</div>
+			<!--直播大图单排列表-->
+			<div class="zhibo-left">
+				<div class="small-circle"></div>
+				<span class="right-time2">2016-01-30 15:08:20</span>
+			</div>
+			<div class="single-img">
+				<ul>
+					<li><img src="images/zhibo-pic5.jpg" alt="单图"></li>
+					<li><img src="images/zhibo-pic5.jpg" alt="单图"></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<!--直播换人直播-->
+			<div class="other-livehd">
+				<div class="zhibo-left2">
+					<div class="large-circle">
+						<img src="images/touxiang3.jpg" alt="直播头像">
+					</div>
+					<p class="touxiang-name">小月月</p>
+				</div>
+				<span class="right-time3">2016-01-30 15:08:20</span>
+				<div class="clear"></div>
+			</div>
+			<div class="single-img2">
+				<ul>
+					<li><img src="images/zhibo-pic5.jpg" alt="单图"></li>
+					<li><img src="images/zhibo-pic5.jpg" alt="单图"></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<!--end标注-->
+			<div class="zhibo-left">
+				<div class="small-circle"></div>
+				<span class="right-time2">2016-01-30 15:08:20</span>
+			</div>
+			<div class="zhibo-long">
+				来自商丘日报的同仁正在分享美丽商丘活动心得以往摄影专版多是摄影记者跟文子作者分头作战，而商丘日报《美丽商丘俺的家》则从活动策划伊始就确定摄影记者们。来自商丘日报的同仁正在分享“美丽商丘”活动心得以往摄影专版多是摄影记者。
+				<div class="zhibo-yinyong">
+					<h2 class="yinyong-tit">引用“一颗可爱的团子”的发言</h2>
+					<p>以往摄影专版多是摄影记者跟文字作者分头作战，而商丘日报《美丽商丘俺的家》。</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

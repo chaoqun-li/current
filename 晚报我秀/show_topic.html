@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我秀话题页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" type="text/css" href="icon-fonts/style.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript">
+    new function (){
+       var _self = this;
+       _self.width = 640;
+       _self.fontSize = 100;
+       _self.widthProportion = function(){var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.32?0.32:p;};
+       _self.changePage = function(){
+           document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+       }
+       _self.changePage(); 
+       window.addEventListener('resize',function(){_self.changePage();},false);
+    };
+	</script>
+</head>
+<body>
+	<!--头部-->
+	<div class="header">
+		<a href="show_index.html"><i class="icon-but-back"></i></a>
+		<img src="images/logo.png" alt="郑州晚报">
+		<h1 class="head-tit">话题</h1>
+		<a href="show_bianji.html"><i class="icon-icon_bianji"></i></a>
+	</div>
+	<!--话题模块-->
+	<div class="topic-container">
+		<div class="topic-banner">
+			<img src="images/topic-banner.jpg">
+		</div>
+		<div class="topic-tit">
+			<p class="topic-name">#hello三月#</p>
+			<span class="taolun-num">讨论：18</span>
+		</div>
+		<div class="topic-admin">
+			<p class="create-admin">创建者:gaoyongchao</p>
+			<p class="create-time">创建时间:2016-03-04</p>
+			<div class="topic-content">
+			正是人间三月天，温度正好，阳光明媚你一定也像复苏的万物，忍不住要朝着太阳前行。不妨，把你的所见所感拍摄下来，以#hello三月#为话题分享至《身边》客户端“我秀”频道，让所有人都嗅到春天的味道！
+			</div>
+		</div>
+		
+	</div>
+	<!--我秀列表-->
+	<div class="show-list">
+		<div class="show-hd">
+			<img src="images/touxiang.jpg" alt="头像">
+		</div>
+		<div class="show-name">
+			<h1>仙都哟又浅
+				<a href="javascript:;" class="zhan"><span>15</span><i class="icon-icon-zan"></i></a>
+				<a href="javascript:;"><i class="icon-icon-pinglun"></i></a>
+				<a href="javascript:;"><i class="icon-but-fenxiang"></i></a>
+			</h1>
+			<span>03-02 22:20</span>
+			<div class="clear"></div>
+		</div>
+		<div class="show-content">
+			<a href="show_topic-info.html">
+				<p class="show-tit">#hello三月#</p>
+				<span>乍暖还寒春意浓，春天来了，桃花朵朵开开哈哈哈哈啊哈哈。</span>
+			</a>
+		</div>
+		<div class="clear"></div>
+		<div class="show-pic">
+			<img src="images/show-pic1.jpg">
+		</div>
+	</div>
+	<!--我秀3张图列表-->
+	<div class="show-list">
+		<div class="show-hd">
+			<img src="images/touxiang.jpg" alt="头像">
+		</div>
+		<div class="show-name">
+			<h1>仙都哟又浅
+				<a href="javascript:;" class="zhan"><span>15</span><i class="icon-icon-zan"></i></a>
+				<a href="javascript:;"><i class="icon-icon-pinglun"></i></a>
+				<a href="javascript:;"><i class="icon-but-fenxiang"></i></a>
+			</h1>
+			<span>03-02 22:20</span>
+			<div class="clear"></div>
+		</div>
+		<div class="show-content">
+			<a href="show_topic-info.html">
+				<p class="show-tit">#hello三月#</p>
+				<span>乍暖还寒春意浓，春天来了，桃花朵朵开开哈哈哈哈啊哈哈。</span>
+			</a>
+		</div>
+		<div class="clear"></div>
+		<div class="show-pics">
+			<table class="list-pics">
+				<tr>
+					<td><img src="images/show-pic2.jpg"></td>
+					<td><img src="images/show-pic3.jpg"></td>
+					<td><img src="images/show-pic3.jpg"></td>
+				</tr>
+				<tr>
+					<td><img src="images/show-pic2.jpg"></td>
+					<td><img src="images/show-pic3.jpg"></td>
+					<td><img src="images/show-pic3.jpg"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--我秀2张图列表-->
+		<div class="show-list">
+		<div class="show-hd">
+			<img src="images/touxiang.jpg" alt="头像">
+		</div>
+		<div class="show-name">
+			<h1>仙都哟又浅
+				<a href="javascript:;" class="zhan"><span>15</span><i class="icon-icon-zan"></i></a>
+				<a href="javascript:;"><i class="icon-icon-pinglun"></i></a>
+				<a href="javascript:;"><i class="icon-but-fenxiang"></i></a>
+			</h1>
+			<span>03-02 22:20</span>
+			<div class="clear"></div>
+		</div>
+		<div class="show-content">
+			<a href="show_topic-info.html">
+				<p class="show-tit">#hello三月#</p>
+				<span>乍暖还寒春意浓，春天来了，桃花朵朵开开哈哈哈哈啊哈哈。</span>
+			</a>
+		</div>
+		<div class="clear"></div>
+		<div class="show-pics">
+			<table class="list-pics2">
+				<tr>
+					<td><img src="images/show-pic5.jpg"></td>
+					<td><img src="images/show-pic6.jpg"></td>
+				</tr>
+				<tr>
+					<td><img src="images/show-pic5.jpg"></td>
+					<td><img src="images/show-pic6.jpg"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--  zan JS--> 
+<script type="text/javascript">
+  $(document).ready(function (e) {
+     $('a.zhan').click(function () {
+         var left = parseInt($(this).offset().left) + 10,
+             top = parseInt($(this).offset().top) - 10,
+             obj = $(this);
+         $(this).append('<div class="zhans"><b>+1<\/b></\div>');
+         $('.zhans').css({
+             'position': 'absolute',
+             'z-index': '1',
+             'color': '#C30',
+             'left': '4rem',
+             'top': top + 'px'
+         }).animate({
+             top: top - 10,
+             left: left + 10
+         }, 'slow', function () {
+             $(this).fadeIn('fast').remove();
+             var Num = parseInt(obj.find('span').text());
+             Num++;
+             obj.find('span').text(Num);
+         });
+         return false; 
+     });
+     $('a.zhan').bind('click', function() {
+       $(this).unbind('click');
+		});
+  
+ });
+ </script> 
+</body>
+</html>

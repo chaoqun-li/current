@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我秀编辑页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" type="text/css" href="icon-fonts/style.css">
+	<link rel="stylesheet" href="demo/demo.css" type="text/css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript">
+    new function (){
+       var _self = this;
+       _self.width = 640;
+       _self.fontSize = 100;
+       _self.widthProportion = function(){var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.32?0.32:p;};
+       _self.changePage = function(){
+           document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+       }
+       _self.changePage(); 
+       window.addEventListener('resize',function(){_self.changePage();},false);
+    };
+	</script>
+
+</head>
+<body>
+	<!--头部-->
+	<div class="header">
+		<a href="show_topic.html"><i class="icon-but-back"></i></a>
+		<img src="images/logo.png" alt="郑州晚报">
+		<h1 class="head-tit">我秀</h1>
+	</div>
+	<!--编辑表单-->
+	<form action="" method="post">
+		<div class="bianji-txt">
+			<textarea  placeholder="请输入内容" id="textarea"></textarea>
+			<div class="bianji-icon">
+				<div class="bianji-pic" id="test">
+					<input id="fileImage" type="file" name="fileselect[]" multiple="" style="width:.2rem"><i class="icon-icon_tupian"></i>
+				</div>
+				<a href="show_topic-list.html"><i class="icon-icon_remen"></i></a>
+			</div>
+			<div id="preview" class="upload_preview"></div>
+			<div class="tip-content">
+				<p class="bianji-tip1">※ </p>
+				<span class="bianji-tip2">请自觉遵守互联网的政策法规，严禁发布色情、暴力、反动的言论与照片。</span>
+				<div class="clear"></div>
+			</div>
+			<div class="tip-content">
+				<p class="bianji-tip1">※ </p>
+				<span class="bianji-tip2">添加话题请使用“热门话题按钮”。</span>
+				<div class="clear"></div>
+			</div>
+			<input type="submit"  class="bianji-sub" value="提交">
+		</div>
+	</form>
+<script type="text/javascript" src="demo/ga.js"></script>
+<script src="demo/jquery.js"></script>
+<script src="demo/zxxFile.js"></script>
+<script>
+var params = {
+	fileInput: $("#fileImage").get(0),
+	dragDrop: $("#fileDragArea").get(0),
+	upButton: $("#fileSubmit").get(0),
+	url: $("#uploadForm").attr("action"),
+	filter: function(files) {
+		var arrFiles = [];
+		for (var i = 0, file; file = files[i]; i++) {
+			if (file.type.indexOf("image") == 0) {
+				if (file.size >= 2048000) {
+					alert('您这张"'+ file.name +'"图片大小过大，应小于2M');	
+				} else {
+					arrFiles.push(file);	
+				}			
+			} else {
+				alert('文件"' + file.name + '"不是图片。');	
+			}
+		}
+		return arrFiles;
+	},
+	onSelect: function(files) {
+		var html = '', i = 0;
+		$("#preview").html('<div class="upload_loading"></div>');
+		var funAppendImage = function() {
+			file = files[i];
+			if (file) {
+				var reader = new FileReader()
+				reader.onload = function(e) {
+					html = html + '<div id="uploadList_'+ i +'" class="upload_append_list"><p>'+ 
+						'<a href="javascript:" class="upload_delete" title="删除" data-index="'+ i +'">×</a><br />' +
+						'<img id="uploadImage_' + i + '" src="' + e.target.result + '" class="upload_image" /></p>'+ 
+						'<span id="uploadProgress_' + i + '" class="upload_progress"></span>' +
+					'</div>';
+					
+					i++;
+					funAppendImage();
+				}
+				reader.readAsDataURL(file);
+			} else {
+				$("#preview").html(html);
+				if (html) {
+					//删除方法
+					$(".upload_delete").click(function() {
+						ZXXFILE.funDeleteFile(files[parseInt($(this).attr("data-index"))]);
+						return false;	
+					});	
+				} 
+			}
+		};
+		funAppendImage();		
+	},
+	onDelete: function(file) {
+		$("#uploadList_" + file.index).fadeOut();
+	},
+	onDragOver: function() {
+		$(this).addClass("upload_drag_hover");
+	},
+	onDragLeave: function() {
+		$(this).removeClass("upload_drag_hover");
+	},
+	onProgress: function(file, loaded, total) {
+		var eleProgress = $("#uploadProgress_" + file.index), percent = (loaded / total * 100).toFixed(2) + '%';
+		eleProgress.show().html(percent);
+	},
+	onSuccess: function(file, response) {
+		$("#uploadInf").append("<p>上传成功，图片地址是：" + response + "</p>");
+	},
+	onFailure: function(file) {
+		$("#uploadInf").append("<p>图片" + file.name + "上传失败！</p>");	
+		$("#uploadImage_" + file.index).css("opacity", 0.2);
+	},
+	onComplete: function() {
+		//file控件value置空
+		$("#fileImage").val("");
+		$("#uploadInf").append("<p>当前图片全部上传完毕，可继续添加上传。</p>");
+	}
+};
+ZXXFILE = $.extend(ZXXFILE, params);
+ZXXFILE.init();
+</script>
+</body>
+</html>

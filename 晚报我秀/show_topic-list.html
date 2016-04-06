@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我秀热门话题列表页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" type="text/css" href="icon-fonts/style.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript">
+    new function (){
+       var _self = this;
+       _self.width = 640;
+       _self.fontSize = 100;
+       _self.widthProportion = function(){var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.32?0.32:p;};
+       _self.changePage = function(){
+           document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+       }
+       _self.changePage(); 
+       window.addEventListener('resize',function(){_self.changePage();},false);
+    };
+	</script>
+</head>
+<body>
+	<!--头部-->
+	<div class="header">
+		<a href="show_index.html"><i class="icon-but-back"></i></a>
+		<img src="images/logo.png" alt="郑州晚报">
+		<h1 class="head-tit">热门话题</h1>
+	</div>
+	<!--话题搜索模块-->
+	<div class="hot-sousuo">
+		<form action="" method="post">
+		    <div class="hot-bar">
+		    	<a href="show_search.html">
+		        <input type="text" class="search_key" placeholder="热门搜索">
+		        <button type="submit"><i class="icon-icon_sousuo"></i></button>
+		        </a>
+		    </div>
+		</form>
+	</div>
+	<!--热门话题列表-->
+	<div class="hot-container">
+		<div class="hot-list">
+			<a href="javascript:;">
+				<div class="hot-img">
+					<img src="images/hot-pic1.jpg" alt="热门话题">
+				</div>
+				<div class="hot-words">
+					<h1>#hello三月#</h1>
+					<p>正是人间三月天，温度正好，阳光明媚，你一定也正是人间三月天，温度正好...
+					</p>
+				</div>
+			</a>
+		</div>
+		<div class="hot-list">
+			<a href="javascript:;">
+				<div class="hot-img">
+					<img src="images/hot-pic2.jpg" alt="热门话题">
+				</div>
+				<div class="hot-words">
+					<h1>#好玩郑州#</h1>
+					<p>正是人间三月天，温度正好，阳光明媚，你一定也正是人间三月天，温度正好...
+					</p>
+				</div>
+			</a>
+		</div>
+		<div class="hot-list">
+			<a href="javascript:;">
+				<div class="hot-img">
+					<img src="images/hot-pic3.jpg" alt="热门话题">
+				</div>
+				<div class="hot-words">
+					<h1>#我要上猜图#</h1>
+					<p>正是人间三月天，温度正好，阳光明媚，你一定也正是人间三月天，温度正好...
+					</p>
+				</div>
+			</a>
+		</div>
+		<div class="hot-list">
+			<a href="javascript:;">
+				<div class="hot-img">
+					<img src="images/hot-pic1.jpg" alt="热门话题">
+				</div>
+				<div class="hot-words">
+					<h1>#hello三月#</h1>
+					<p>正是人间三月天，温度正好，阳光明媚，你一定也正是人间三月天，温度正好...
+					</p>
+				</div>
+			</a>
+		</div>
+		<div class="hot-list">
+			<a href="javascript:;">
+				<div class="hot-img">
+					<img src="images/hot-pic3.jpg" alt="热门话题">
+				</div>
+				<div class="hot-words">
+					<h1>#我要上猜图#</h1>
+					<p>正是人间三月天，温度正好，阳光明媚，你一定也正是人间三月天，温度正好...
+					</p>
+				</div>
+			</a>
+		</div>
+		<div class="hot-list">
+			<a href="javascript:;">
+				<div class="hot-img">
+					<img src="images/hot-pic1.jpg" alt="热门话题">
+				</div>
+				<div class="hot-words">
+					<h1>#hello三月#</h1>
+					<p>正是人间三月天，温度正好，阳光明媚，你一定也正是人间三月天，温度正好...
+					</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+</body>
+</html>

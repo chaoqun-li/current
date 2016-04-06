@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>直播首页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" type="text/css" href="icon-fonts/style.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript">
+    new function (){
+       var _self = this;
+       _self.width = 640;
+       _self.fontSize = 100;
+       _self.widthProportion = function(){var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.32?0.32:p;};
+       _self.changePage = function(){
+           document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+       }
+       _self.changePage(); 
+       window.addEventListener('resize',function(){_self.changePage();},false);
+    };
+	</script>
+</head>
+<body>
+	<!--头部-->
+	<div class="header">
+		<a href="javascript:;"><i class="icon-but-back"></i></a>
+		<img src="images/logo.png" alt="郑州晚报">
+		<h1 class="head-tit">直播</h1>
+	</div>
+	<!--预告列表-->
+	<div class="live-container">
+		<div class="live-header">
+			<div class="header-left"></div>
+			<span>预告</span>
+		</div>
+
+		<a href="live_zhibo-info.html">
+			<div class="live-content1">
+				<div class="live-img">
+					<img src="images/live-pic1.jpg" alt="直播">
+				</div>
+				<span class="live-words">
+					<h1>2016年全国两会全解读</h1>
+					<p><i class="icon-icon_zhongbiao"></i>
+						<span class="live-time">2016.1.30 15:00</span>
+					</p>
+					<div class="left-btn1">即将开始</div>
+					<span class="right-btn">我在现场</span>
+				</span>
+			</div>
+		</a>
+
+		<a href="live_zhibo-info.html">
+			<div class="live-content2">
+				<div class="live-img">
+					<img src="images/live-pic2.jpg" alt="直播">
+				</div>
+				<span class="live-words">
+					<h1>上海合作组织成员国总理会议在郑州。</h1>
+					<p><i class="icon-icon_zhongbiao"></i>
+						<span class="live-time">2016.1.30 15:00</span>
+					</p>
+					<div class="left-btn1">即将开始</div>
+					<span class="right-btn">松社论坛</span>
+				</span>
+			</div>
+		</a>
+		<div class="clear"></div>
+	</div>
+	<!--直播列表-->
+	<div class="live-container">
+		<div class="live-header">
+			<div class="header-left"></div>
+			<span>直播</span>
+		</div>
+
+		<a href="live_zhibo-info.html">
+			<div class="live-content1">
+				<div class="live-img">
+					<img src="images/live-pic3.jpg" alt="直播">
+				</div>
+				<span class="live-words">
+					<h1>2016年全国两会全解读</h1>
+					<p><i class="icon-icon_zhongbiao"></i>
+						<span class="live-time">2016.1.30 15:00</span>
+					</p>
+					<div class="left-btn2">直播中</div>
+					<span class="right-btn">我在现场</span>
+				</span>
+			</div>
+		</a>
+
+		<a href="live_zhibo-info.html">
+			<div class="live-content2">
+				<div class="live-img">
+					<img src="images/live-pic4.jpg" alt="直播">
+				</div>
+				<span class="live-words">
+					<h1>上海合作组织成员国总理会议在郑州。</h1>
+					<p><i class="icon-icon_zhongbiao"></i>
+						<span class="live-time">2016.1.30 15:00</span>
+					</p>
+					<div class="left-btn2">直播中</div>
+					<span class="right-btn">松社论坛</span>
+				</span>
+			</div>
+		</a>
+		<div class="clear"></div>
+	</div>
+	<!--往期列表-->
+	<div class="live-container">
+		<div class="live-header">
+			<div class="header-left"></div>
+			<span>往期</span>
+		</div>
+
+		<a href="live_zhibo-info.html">
+			<div class="live-content1">
+				<div class="live-img">
+					<img src="images/live-pic5.jpg" alt="直播">
+				</div>
+				<span class="live-words">
+					<h1>2016年全国两会全解读</h1>
+					<p><i class="icon-icon_zhongbiao"></i>
+						<span class="live-time">2016.1.30 15:00</span>
+					</p>
+					<div class="left-btn3">直播已结束</div>
+					<span class="right-btn">我在现场</span>
+				</span>
+			</div>
+		</a>
+
+		<a href="live_zhibo-info.html">
+			<div class="live-content2">
+				<div class="live-img">
+					<img src="images/live-pic6.jpg" alt="直播">
+				</div>
+				<span class="live-words">
+					<h1>上海合作组织成员国总理会议在郑州。</h1>
+					<p><i class="icon-icon_zhongbiao"></i>
+						<span class="live-time">2016.1.30 15:00</span>
+					</p>
+					<div class="left-btn3">直播已结束</div>
+					<span class="right-btn">松社论坛</span>
+				</span>
+			</div>
+		</a>
+		<div class="clear"></div>
+	</div>
+</body>
+</html>
