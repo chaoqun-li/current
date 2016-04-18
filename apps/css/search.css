@@ -1,0 +1,349 @@
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.main-color{color: #d84a49;font-weight: 700;}
+a:hover {
+	color: #F24957;
+}
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+  font-size: 18px;
+}
+body {
+	min-width: 320px;
+	max-width: 540px;
+	margin: 0 auto;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+	display: block
+}
+audio, canvas, progress, video {
+	display: inline-block;
+	vertical-align: baseline
+}
+audio:not([controls]) {
+	display: none;
+	height: 0
+}
+[hidden], template {
+display:none
+}
+a {
+	background-color: transparent
+}
+a:active, a:hover {
+	outline: 0
+}
+abbr[title] {
+	border-bottom: 1px dotted
+}
+b, strong {
+	font-weight: 700
+}
+dfn {
+	font-style: italic
+}
+img {
+	border: 0
+}
+legend {
+	border: 0;
+	padding: 0
+}
+textarea {
+	overflow: auto
+}
+optgroup {
+	font-weight: 700
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+td, th {
+	padding: 0
+}
+button, input, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit
+}
+a {
+	color: #333;
+	text-decoration: none
+}
+a:focus, a:hover {
+	color: #23527c;
+	text-decoration: none
+}
+a:focus {
+	outline: 0;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px
+}
+figure {
+	margin: 0
+}
+/*-----Grid------*/
+.col-md-3{width: 33.33%;float: left;}
+/*----images----*/
+img {
+	vertical-align: middle
+}
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto
+}
+.img-rounded {
+	border-radius: 6px
+}
+.img-circle {
+	border-radius: 50%
+}
+/*----text----*/
+.btn-more {
+	padding: 0.16rem 0.48rem;
+	border: 1px solid #ddd;
+}
+.center-block {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+.text-left {
+	text-align: left
+}
+.text-right {
+	text-align: right
+}
+.text-center {
+	text-align: center
+}
+.text-justify {
+	text-align: justify
+}
+.text-nowrap {
+	white-space: nowrap
+}
+.text-lowercase {
+	text-transform: lowercase
+}
+.text-uppercase {
+	text-transform: uppercase
+}
+.text-capitalize {
+	text-transform: capitalize
+}
+.text-muted {
+	color: #777
+}
+.text-primary {
+	color: #337ab7
+}
+/*----list----*/
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+ol, ul {
+	margin-top: 0;
+	margin-bottom: 0
+}
+ol ol, ol ul, ul ol, ul ul {
+	margin-bottom: 0
+}
+.list-unstyled {
+	list-style: none
+}
+.list-inline {
+	list-style: none
+}
+dl {
+	margin-top: 0;
+	margin-bottom: 20px
+}
+dd, dt {
+	line-height: 1.42857143
+}
+dt {
+	font-weight: 700
+}
+dd {
+	margin-left: 0
+}
+/*-----Fonts Icon ---*/
+@font-face {
+	font-family: icomoon;
+	src: url(fonts/icomoon.eot?ue0eno);
+	src: url(fonts/icomoon.eot?ue0eno#iefix) format('embedded-opentype'), url(fonts/icomoon.ttf?ue0eno) format('truetype'), url(fonts/icomoon.woff?ue0eno) format('woff'), url(fonts/icomoon.svg?ue0eno#icomoon) format('svg');
+	font-weight: 400;
+	font-style: normal
+}
+[class*=" icon-"], [class^=icon-] {
+font-family:icomoon!important;
+speak:none;
+font-style:normal;
+font-weight:400;
+font-variant:normal;
+text-transform:none;
+line-height:1;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale
+}
+.icon-back:before {
+	content: "\e900"
+}
+.icon-back-less:before {
+	content: "\e901"
+}
+.icon-car:before {
+	content: "\e902"
+}
+.icon-car-dark:before {
+	content: "\e903"
+}
+.icon-category:before {
+	content: "\e904"
+}
+.icon-category-dark:before {
+	content: "\e905"
+}
+.icon-fire:before {
+	content: "\e906"
+}
+.icon-grid:before {
+	content: "\e907"
+}
+.icon-group .path1:before {
+	content: "\e908";
+	color: #fff
+}
+.icon-group .path2:before {
+	content: "\e909";
+	margin-left: -1em;
+	color: #7f7f7f
+}
+.icon-group-less:before {
+	content: "\e90a"
+}
+.icon-heart:before {
+	content: "\e90b"
+}
+.icon-heart-dark:before {
+	content: "\e90c"
+}
+.icon-home:before {
+	content: "\e90d"
+}
+.icon-home-dark:before {
+	content: "\e90e"
+}
+.icon-next:before {
+	content: "\e90f"
+}
+.icon-recycle:before {
+	content: "\e910"
+}
+.icon-right:before {
+	content: "\e911"
+}
+.icon-search:before {
+	content: "\e912"
+}
+.icon-share:before {
+	content: "\e913"
+}
+.icon-star:before {
+	content: "\e914"
+}
+.icon-star-dark:before {
+	content: "\e915"
+}
+.icon-up:before {
+	content: "\e916"
+}
+
+.product-grid .pro-info .pro-name {
+	height: 1.68rem;
+}
+/*-------------------Top Bar--------------------*/
+.top-bar {
+  line-height: 1rem;
+  padding: 0.16rem 0.32rem;
+  position: relative;
+  z-index: 100;background: #fff;
+}
+.top-bar .top-back, .top-bar .top-search {
+  float: left;
+}
+.top-bar .top-back {
+  width: 0.56rem;
+}
+.top-bar .top-search {
+  width: 8.8rem;
+  display: block;
+}
+.top-search {
+  position: relative;
+  z-index: 4;
+}
+.top-search input {
+  border-radius: 1rem;
+  border: 1px solid #ddd;
+  padding-left: 0.8rem;
+  position: relative;
+  z-index: 5;
+  width: 8rem;
+}
+.top-search i {
+  position: absolute;
+  z-index: 6;
+  top: 0;
+  left: 0.24rem;
+  line-height: 1rem;
+}
+/*------------------Footer------------------*/
+.footer {
+	font-size: 18px;
+	color: #323433;
+	text-align: center;
+	height: 1.18rem;
+	padding-top: 0.32rem;
+}
+.footer .active,.footer .active i{color: #d84a49 !important}
+footer {
+	position: fixed;
+	z-index: 999;
+	bottom: 0;
+	background: #fff;
+}
+.footer i {
+	font-size: 21px;
+}
+
+/*-----------Search ---------*/
+.serach{font-size: 18px;}
+.search .top-bar .top-search{width: 7.3rem;}
+.search .top-bar .top-search input{width: 6.5rem;}
+.search .top-bar .top-search-text{width: 1.5rem;text-align: center;float: left;}
+.search .top-bar .top-search-text a{font-size: 16px;padding-left: 0.24rem;}
+.search .search-top{margin-top: 0.16rem;padding: 0.24rem 0.32rem;font-size: 16px;line-height: 1.6}
+.search .search-top i{line-height: 1.6;}
+.search .near-search{margin-top: 0.36rem;}
+.search .search-main .no-search{color: #999;text-align: center;}
+.search .search-main a:first-child,.search .search-main .hot-seach a:first-child{margin-left: 0}
+.search .search-main a{border:1px solid #ddd;padding: 0.08rem 0.4rem;display: inline-block;margin-left: 0.24rem;margin-bottom: 0.36rem;color: #999}
+.search .hot-search{margin-top: 0.64rem;}

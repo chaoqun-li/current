@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>郑晚商城</title> 
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!-- Google Web Fonts -->
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+    <link rel="stylesheet" href="css/demos.css"> 
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="js/zepto.js"></script>
+    <script src="js/config.js"></script>
+</head>
+<body>
+    <div class="page-group" >
+        <div class="page" id="page-infinite-scroll-bottom">
+            <header class="bar bar-nav">
+                <a class="button button-link button-nav pull-left back">
+                    <span class="icon icon-left"></span>
+                    返回
+                </a>
+                <div class="searchbar" style="background: none;">
+                    <a class="searchbar-cancel">取消</a>
+                    <div class="search-input">
+                        <label class="icon icon-search" for="search"></label>
+                        <input type="search" id='search' placeholder='输入关键字...'/>
+                    </div>
+                </div>
+            </header>
+            <nav class="bar bar-tab">
+                <a class="tab-item b-index" href="/apps/" external>
+                    <span class="icon icon-home"></span>
+                    <span class="tab-label">首页</span>
+                </a>
+                <a class="tab-item" href="store-category.html" external>
+                    <span class="icon icon-computer"></span>
+                    <span class="tab-label">分类</span>
+                </a>
+                <a class="tab-item" href="cart.html" external>
+                    <span class="icon icon-cart"></span>
+                    <span class="tab-label">购物车</span>
+                </a> 
+            </nav>
+            <div class="content">
+                <div class="pro-list">
+                    <!--TOP bar-->
+                    <div class="harf-border-bottom  fixed-tab" data-offset="44" style="box-shadow: 0 2px 1px rgba(0, 0, 0, 0.14)">
+                        <div class="prolist-bar">
+                            <div class="row">
+                                <div class="col-85">
+                                    <div class="listbar-left row no-gutter">
+                                        <a href="javascript:void"  class="col-25">综合</a>
+                                        <a href="javascript:void"  class="col-25">最新</a>
+                                        <a href="javascript:void"  class="col-25">销量</a>
+                                        <a href="javascript:void" class="bar-price col-25">价格</a>
+                                    </div>
+                                </div>
+                                <div class="col-15">
+                                    <div class="listbar-right"> 
+                                        <a href="#product-grid">
+                                            <i class="icon icon-app"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                                                                         
+                       </div>
+                    </div>
+                    <!--Prolist-->
+                    <div id="page-infinite-scroll-bottom">
+                        <div class="infinite-scroll" data-distance="100" >
+                            <div class="list-block" style="margin:.5rem 0 0">
+                                <div class="index-product">
+                                    <ul class="list-product row" style="background: #f2f2f2;">
+                                        <li class="col-50">
+                                                <a href="product.html" external>
+                                                    <div class="product">
+                                                        <div class="pro-img">
+                                                           <img src="images/product.jpg" alt="" class="img-responsive"></div>
+                                                        <div class="pro-info">
+                                                            <p class="pro-name" style="margin:0.24rem 0">美国碧根果五香味1千克装</p>
+                                                            <p class="pro-price harf-border-top clearfix">
+                                                                <span class="price-number">￥70.00</span>
+                                                                <span class="product-sell">
+                                                                    已售
+                                                                    <span>60</span>
+                                                                    袋
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                        </li>
+                                        <li class="col-50">
+                                                <a href="product.html" external>
+                                                    <div class="product">
+                                                        <div class="pro-img">
+                                                           <img src="images/product.jpg" alt="" class="img-responsive"></div>
+                                                        <div class="pro-info">
+                                                            <p class="pro-name" style="margin:0.24rem 0">美国碧根果五香味1千克装</p>
+                                                            <p class="pro-price harf-border-top clearfix">
+                                                                <span class="price-number">￥70.00</span>
+                                                                <span class="product-sell">
+                                                                    已售
+                                                                    <span>60</span>
+                                                                    袋
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                        </li>
+                                        <li class="col-50">
+                                                <a href="product.html" external>
+                                                    <div class="product">
+                                                        <div class="pro-img">
+                                                           <img src="images/product.jpg" alt="" class="img-responsive"></div>
+                                                        <div class="pro-info">
+                                                            <p class="pro-name" style="margin:0.24rem 0">美国碧根果五香味1千克装</p>
+                                                            <p class="pro-price harf-border-top clearfix">
+                                                                <span class="price-number">￥70.00</span>
+                                                                <span class="product-sell">
+                                                                    已售
+                                                                    <span>60</span>
+                                                                    袋
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                        </li>
+                                        <li class="col-50">
+                                            <a href="product.html" external>
+                                                <div class="product">
+                                                    <div class="pro-img">
+                                                       <img src="images/product.jpg" alt="" class="img-responsive"></div>
+                                                    <div class="pro-info">
+                                                        <p class="pro-name" style="margin:0.24rem 0">美国碧根果五香味1千克装</p>
+                                                        <p class="pro-price harf-border-top clearfix">
+                                                            <span class="price-number">￥70.00</span>
+                                                            <span class="product-sell">
+                                                                已售
+                                                                <span>60</span>
+                                                                袋
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col-50">
+                                            <a href="product.html" external>
+                                                <div class="product">
+                                                    <div class="pro-img">
+                                                       <img src="images/product.jpg" alt="" class="img-responsive"></div>
+                                                    <div class="pro-info">
+                                                        <p class="pro-name" style="margin:0.24rem 0">美国碧根果五香味1千克装</p>
+                                                        <p class="pro-price harf-border-top clearfix">
+                                                            <span class="price-number">￥70.00</span>
+                                                            <span class="product-sell">
+                                                                已售
+                                                                <span>60</span>
+                                                                袋
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col-50">
+                                            <a href="product.html" external>
+                                                <div class="product">
+                                                    <div class="pro-img">
+                                                       <img src="images/product.jpg" alt="" class="img-responsive"></div>
+                                                    <div class="pro-info">
+                                                        <p class="pro-name" style="margin:0.24rem 0">美国碧根果五香味1千克装</p>
+                                                        <p class="pro-price harf-border-top clearfix">
+                                                            <span class="price-number">￥70.00</span>
+                                                            <span class="product-sell">
+                                                                已售
+                                                                <span>60</span>
+                                                                袋
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>                                                       
+                                    </ul>
+                                <!-- 加载提示符 -->
+                                    <div class="infinite-scroll-preloader" style="background: #f2f2f2;margin: 0;padding: .5rem 0 0;">
+                                        <div class="preloader">
+                                        </div>
+                                    </div> 
+                                </div>                                  
+                            </div>
+                        </div>                   
+                    </div>    
+                </div>         
+            </div>
+        </div>
+        <div class="page" id="product-grid">
+            <header class="bar bar-nav">
+                <a class="button button-link button-nav pull-left back">
+                    <span class="icon icon-left"></span>
+                    返回
+                </a>
+                <div class="searchbar" style="background: none;">
+                    <a class="searchbar-cancel">取消</a>
+                    <div class="search-input">
+                        <label class="icon icon-search" for="search"></label>
+                        <input type="search" id='search' placeholder='输入关键字...'/>
+                    </div>
+                </div>
+            </header>
+            <nav class="bar bar-tab">
+                <a class="tab-item b-index" href="/app/" external>
+                    <span class="icon icon-home"></span>
+                    <span class="tab-label">首页</span>
+                </a>
+                <a class="tab-item" href="store-category.html">
+                    <span class="icon icon-computer"></span>
+                    <span class="tab-label">分类</span>
+                </a>
+                <a class="tab-item" href="cart.html">
+                    <span class="icon icon-cart"></span>
+                    <span class="tab-label">购物车</span>
+                </a> 
+            </nav>
+            <div class="content"> 
+                <div class="pro-list">
+                    <!--TOP bar-->
+                    <div class="harf-border-bottom  fixed-tab" data-offset="44" style="box-shadow: 0 2px 1px rgba(0, 0, 0, 0.14)">
+                        <div class="prolist-bar">
+                            <div class="row">
+                                <div class="col-85">
+                                    <div class="listbar-left row no-gutter">
+                                        <a href="javascript:void"  class="col-25">综合</a>
+                                        <a href="javascript:void"  class="col-25">最新</a>
+                                        <a href="javascript:void"  class="col-25">销量</a>
+                                        <a href="javascript:void" class="bar-price col-25">价格</a>
+                                    </div>
+                                </div>
+                                <div class="col-15">
+                                    <div class="listbar-right"> 
+                                        <a href="product-list.html" external>
+                                            <i class="icon icon-app"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                                                                         
+                       </div>
+                    </div>
+                    <!--Prolist-->
+                    <div class="list-block media-list" style="margin: .5rem 0 0">
+                         <div class="infinite-scroll" data-distance="100" >
+                            <ul class="media-list">
+                                <li>
+                                    <a href="product.html" class="item-link item-content">
+                                        <div class="item-media">
+                                            <img src="images/product.jpg" width="80">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">新疆特产阿克苏特产苹果20斤精品礼盒装</div>                                               
+                                            </div> 
+                                            <div class="item-text">
+                                                ￥98<i>已售<span>20</span></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="item-link item-content">
+                                        <div class="item-media">
+                                            <img src="images/product.jpg" width="80">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">新疆特产阿克苏特产苹果20斤精品礼盒装</div>                                               
+                                            </div> 
+                                            <div class="item-text">
+                                                ￥98<i>已售<span>20</span></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="item-link item-content">
+                                        <div class="item-media">
+                                            <img src="images/product.jpg" width="80">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">新疆特产阿克苏特产苹果20斤精品礼盒装</div>                                               
+                                            </div> 
+                                            <div class="item-text">
+                                                ￥98<i>已售<span>20</span></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="item-link item-content">
+                                        <div class="item-media">
+                                            <img src="images/product.jpg" width="80">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">新疆特产阿克苏特产苹果20斤精品礼盒装</div>                                               
+                                            </div> 
+                                            <div class="item-text">
+                                                ￥98<i>已售<span>20</span></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="item-link item-content">
+                                        <div class="item-media">
+                                            <img src="images/product.jpg" width="80">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">新疆特产阿克苏特产苹果20斤精品礼盒装</div>                                               
+                                            </div> 
+                                            <div class="item-text">
+                                                ￥98<i>已售<span>20</span></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="item-link item-content">
+                                        <div class="item-media">
+                                            <img src="images/product.jpg" width="80">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">新疆特产阿克苏特产苹果20斤精品礼盒装</div>                                               
+                                            </div> 
+                                            <div class="item-text">
+                                                ￥98<i>已售<span>20</span></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- 加载提示符 -->
+                            <div class="infinite-scroll-preloader" style="background: #f2f2f2;margin: 0;padding: .5rem 0 0;">
+                                <div class="preloader">
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>              
+            </div>       
+         </div>
+    </div>
+    <script src="js/sm.js"></script>
+    <script src="js/sm-extend.js"></script> 
+    <script src="js/demos.js"></script>  
+</body>
+</html>

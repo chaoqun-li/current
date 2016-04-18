@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="yes" name="apple-touch-fullscreen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>搜索页面</title>
+	<meta content="telephone=no,email=no" name="format-detection">
+	<!--动态加载META 信息-->
+	<meta content="modeName=750-12" name="grid" />
+	<script src="js/meta/flexible_css.debug.js"></script>
+	<script src="js/meta/flexible.debug.js"></script>
+	<script src="js/meta/makegrid.debug.js"></script>
+	<!--主CSS-->
+	<link rel="stylesheet" type="text/css" href="css/search.css" />
+	<link rel="stylesheet" type="text/css" href="css/sweetalert.css" />
+	<link rel="stylesheet" type="text/css" href="fonts/style2.css" />
+</head>
+<body>
+	<div class="search">
+		<header>
+			<!-- Top Bar-->
+			<div class="top-bar clearfix ">
+				<div class="top-back">
+					<a href="javascript:void" class="pull-left"> <i class="icon icon-left"></i>
+					</a>
+				</div>
+				<div class="top-search">
+					<input type="text" class="form-control"  placeholder="苹果"> <i class="icon-search"></i>
+				</div>
+				<div class="top-search-text">
+					<a href="#">搜索</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="search-main">
+				<div class="harf-border-top">
+					<div class="search-top">
+						<p class="alert">
+							<i class="icon-search"></i>
+							&nbsp;最近搜索
+							<span class="demo_4 pull-right" >
+								<i class="icon-recycle"></i>
+							</span>
+						</p>
+
+						<p class="near-search" id="near-search">
+							<a href="#">苹果</a>
+							<a href="#">充气娃娃</a>
+							<a href="#">内衣</a>
+							<a href="#">情趣用品</a>
+						</p>
+						<!--------无显示结果显示
+	    			<p class="no-searc">暂无搜索结果丫</p>
+					------>
+					<div class="hot-search">
+						<p>
+							<i class="icon-fire"></i>
+							&nbsp;热门搜索
+						</p>
+						<p class="near-search">
+							<a href="#">苹果</a>
+							<a href="#">充气娃娃</a>
+							<a href="#">内衣</a>
+							<a href="#">情趣用品</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer></footer>
+</div>
+<!--  JQUERY JS-->
+<script src="js/jquery.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+                $(".demo_4 i").click(function() {
+                    swal({
+                        title: "您确定要删除吗？",
+                        text: "您确定要删除这条数据？",
+                        type: "warning",
+                        showCancelButton: true,
+                        closeOnConfirm: false,
+                        confirmButtonText: "是的，我要删除",
+                        confirmButtonColor: "#ec6c62"
+                    }, function() {
+                        $.ajax({ 
+                        }).done(function(data) {
+                            swal("操作成功!", "已成功删除最近搜索！", "success");
+                            $("#near-search").remove();
+                            $(".demo_4 i").remove();
+                        }).error(function(data) {
+                            swal("OMG", "删除操作失败了!", "error");
+                        });
+                    });
+                });
+            });
+</script>
+</body>
+</html>
