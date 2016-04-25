@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>视频列表页</title>
+		<link rel="stylesheet" href="assets/agile/css/agile.layout.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/flat.component.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/flat.color.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/iconline.css">
+		<link rel="stylesheet" href="assets/agile/css/style.css">
+		<style>
+			[data-role="slider"] img{ display: block;}
+			.titlebar{background-color:#fff;border-bottom:solid 1px #e2e2e2;}
+			.iconline-share{float: right;}
+			.top_bar h1{color:#696969;height: 100%;border-left:1px solid;left:38%;padding-top:12px;padding-left:8px;}
+		</style>
+	</head>
+	<body>
+		<div id="section_container">
+			<section id="baoming_section" data-role="section" class="active">
+				<header>
+				    <div class="top_bar titlebar">
+				    	<a data-toggle="back"><i class="iconfont iconline-arrow-left"></i></a>
+				    	<img src="images/logo.png" class="header-logo_left">
+				    	<h1 class="pl-tit">视频</h1>
+				    </div>
+				</header>
+				<article data-role="article" id="main_article" class="active" data-scroll="pullup" style="top:44px;background-color:#f6f6f6">
+					<div class="scroller"> 
+						<div id="content1">
+							<a href="#radio-info" data-toggle="html">
+								<div class="bofang_content">
+									<video id="video1" poster="images/radio1.png">
+										<source src="">
+										<source src="">
+									</video>
+									<button class="iconfont iconline-media-play"></button>
+									<div class="bofang_time">2分10秒</div>
+									<div class="bofang_tit">
+										<p>艾弗森最新视频</p>
+										<span class="iconfont iconline-view"> 1208</span>
+									</div>
+								</div>
+							</a>
+							<a href="#radio-info" data-toggle="html">
+								<div class="bofang_content">
+									<video id="video1" poster="images/radio1.png">
+										<source src="">
+										<source src="">
+									</video>
+									<button class="iconfont iconline-media-play"></button>
+									<div class="bofang_time">2分10秒</div>
+									<div class="bofang_tit">
+										<p>艾弗森最新视频</p>
+										<span class="iconfont iconline-view"> 1208</span>
+									</div>
+								</div>
+							</a>
+							<a href="#radio-info" data-toggle="html">
+								<div class="bofang_content">
+									<video id="video1" poster="images/radio1.png">
+										<source src="">
+										<source src="">
+									</video>
+									<button class="iconfont iconline-media-play"></button>
+									<div class="bofang_time">2分10秒</div>
+									<div class="bofang_tit">
+										<p>艾弗森最新视频</p>
+										<span class="iconfont iconline-view"> 1208</span>
+									</div>
+								</div>
+							</a>
+							<a href="#radio-info" data-toggle="html">
+								<div class="bofang_content">
+									<video id="video1" poster="images/radio1.png">
+										<source src="">
+										<source src="">
+									</video>
+									<button class="iconfont iconline-media-play"></button>
+									<div class="bofang_time">2分10秒</div>
+									<div class="bofang_tit">
+										<p>艾弗森最新视频</p>
+										<span class="iconfont iconline-view"> 1208</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</article>
+			</section>
+		</div>
+		
+		
+		<script src="assets/third/jquery/jquery-2.1.3.min.js"></script>
+		<script src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
+		<script src="assets/third/iscroll/iscroll-probe.js"></script>
+		<script src="assets/third/arttemplate/template-native.js"></script>
+		
+		<script type="text/javascript" src="assets/agile/js/agile.js"></script>		
+		
+		<script type="text/javascript" src="assets/bridge/exmobi.js"></script>
+		<script type="text/javascript" src="assets/bridge/agile.exmobi.js"></script>
+		<!-- app -->
+		<script type="text/javascript" src="assets/app/js/app.js"></script>
+		<script>
+			var myVideo=document.getElementById("video1"); 
+			$('.iconline-media-play').click(function(){
+
+				if (myVideo.paused) 
+				   myVideo.play(); 
+				else 
+				   myVideo.pause(); 
+			})
+			//上拉加载内容
+			//当refresh初始化会进入此监听
+			$('#main_article').on('refreshInit', function(){
+				var refresh = A.Refresh(this);
+				//监听下拉刷新事件，可以做一些逻辑操作，当data-scroll="pullup"时无效
+				refresh.on('pulldown', function(){
+					$('#content').prepend('<li><div class="text">下拉刷新的内容</div></li>');
+					refresh.refresh();//当scroll区域有dom结构变化需刷新
+				});
+				//监听上拉刷新事件，可以做一些逻辑操作，当data-scroll="pulldown"时无效
+				refresh.on('pullup', function(){
+					$('#content1').append('<a href="#radio-info" data-toggle="html"><div class="bofang_content"><video id="video1" poster="images/radio1.png"><source src="/media/video.oga"><source src="/media/video.m4v"></video><button class="iconfont iconline-media-play"></button><div class="bofang_time">2分10秒</div><div class="bofang_tit"><p>艾弗森最新视频</p><span class="iconfont iconline-view"> 1208</span></div></div></a>');
+					refresh.refresh();//当scroll区域有dom结构变化需刷新
+				});
+			});
+		</script>
+		
+	</body>
+</html>

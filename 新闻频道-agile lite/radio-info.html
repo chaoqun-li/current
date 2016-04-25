@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>视频详情页</title>
+		<link rel="stylesheet" href="assets/agile/css/agile.layout.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/flat.component.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/flat.color.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/iconline.css">
+		<link rel="stylesheet" href="assets/agile/css/style.css">
+		<style>
+			[data-role="slider"] img{ display: block;}
+			.titlebar{background-color:#fff;border-bottom:solid 1px #e2e2e2;}
+			.iconline-share{float: right;}
+		</style>
+	</head>
+	<body>
+		<div id="section_container">
+			<section id="baoming_section" data-role="section" class="active">
+				<header>
+				    <div class="top_bar titlebar">
+				    	<a data-toggle="back"><i class="iconfont iconline-arrow-left"></i></a>
+				    	<img src="images/logo.png" class="header-logo_left">
+				    	<div class="top_icon">
+				    		<a href="javascript:;" class="top_href">
+				    			<span class="iconfont iconline-share"></span>
+				    		</a>
+				    		<a href="#pinglun" class="top_href" data-toggle="html">
+					    		<span class="iconfont iconline-chat-bubble"></span>
+					    		<span class="pl_num">2306</span>
+				    		</a>
+				    	</div>
+				    </div>
+				</header>
+				<article data-role="article" id="main_article" class="active" data-scroll="verticle" style="top:44px;">
+					<div class="scroller"> 
+						<h1 style="padding:8px;line-height:24px">
+							<div class="left_block"></div>
+							<span ><p class="baoming_tit">曝撒贝宁求婚成功 下撒外国女友李白资料美照曝光</p></span>
+						</h1>
+						<p class="baoming_time">郑州晚报 2016/03/02 06:53</p>
+						<div class="radio_info">
+							<video id="video1" poster="images/info_pic.png">
+								<source src="/media/video.oga">
+								<source src="/media/video.m4v">
+							</video>
+							<button class="iconfont iconline-media-play"></button>
+						</div>
+						<p class="radio_info_words">
+							公元79年8月24日，下午一时左右，离城约十公里的维苏威火山突然爆发了.附近的人们看到，先是有一片奇特的云彩从山顶冉冉升起，向四周扩散，接着传来震耳欲聋的爆炸声，维苏威山上红光四射，巨龙般的火柱随之冲天而起.转眼之间，天色昏黑，大地颤抖，平时宁静的那不勒斯湾也激荡起狂怒的浪涛.火山喷出的炽热熔岩，落地时已凝固成石块，大量的石块混合着火山灰，一下子覆盖了火山附近的地面。
+						</p>
+					</div>
+				</article>
+				<footer>
+					<div class="footer_words">Copyright&2013 郑州晚报</div>
+				</footer>
+			</section>
+		</div>
+		
+		
+		<script src="assets/third/jquery/jquery-2.1.3.min.js"></script>
+		<script src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
+		<script src="assets/third/iscroll/iscroll-probe.js"></script>
+		<script src="assets/third/arttemplate/template-native.js"></script>
+		
+		<script type="text/javascript" src="assets/agile/js/agile.js"></script>		
+		
+		<script type="text/javascript" src="assets/bridge/exmobi.js"></script>
+		<script type="text/javascript" src="assets/bridge/agile.exmobi.js"></script>
+		<!-- app -->
+		<script type="text/javascript" src="assets/app/js/app.js"></script>
+		<script>
+			var myVideo=document.getElementById("video1"); 
+			$('.iconline-media-play').click(function(){
+
+				if (myVideo.paused) 
+				   myVideo.play(); 
+				else 
+				   myVideo.pause(); 
+			})
+		</script>
+		
+	</body>
+</html>
