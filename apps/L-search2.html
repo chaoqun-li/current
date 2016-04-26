@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商城搜索</title>  
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!-- Google Web Fonts -->
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+    <link rel="stylesheet" href="css/demos.css"> 
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="js/zepto.js"></script>
+    <script src="js/config.js"></script>
+</head>
+<body>
+    <div class="page-group">
+        <div id="page-infinite-scroll-bottom" class="page">
+            <header class="bar bar-nav">
+                <a class="button button-link button-nav pull-left back">
+                    <span class="icon icon-left"></span>
+                </a>
+                <!-- Search -->
+                <div class="top_search">
+	                <div class="searchbar">
+	                    <a class="searchbar-cancel">取消</a>
+	                    <div class="search-input">
+	                        <label class="icon icon-search" for="search"></label>
+	                        <input type="search" id='search' placeholder='输入关键字...'/>
+	                    </div>
+	                </div>
+                </div>
+            </header>
+            <div class="content" style="background-color:#fff">
+                <div class="search_store">
+                    <div classe="new_search">
+                    	<p class="new_tit">
+            		 		<span class="icon icon-search"> 最近搜索</span>
+        		 		 	<span class="icon icon-remove pull-right" id="rem"></span>
+        		 		 	<a href="#" class="button button-fill button-success pull-right">完成</a>
+                    	</p>
+                    	<div class="new_search_btn" id="new_search_info">
+                    		<p>
+                    			<a href="#" class="button button-light pull-left">
+                    				猕猴桃
+                    				<span class="remove_btn">×</span>
+                    			</a>
+                    		</p>
+                    		<p>
+                    			
+                    			<a href="#" class="button button-light pull-left">
+                    				红枣
+                    				<span class="remove_btn">×</span>
+                    			</a>
+                    		</p>
+                    		<p>
+                    			
+                    			<a href="#" class="button button-light pull-left">
+                    				潮流品牌
+									<span class="remove_btn">×</span>
+                    			</a>
+                    		</p>
+                    		<p>
+                    			<a href="#" class="button button-light pull-left">
+                    				男装
+                    				<span class="remove_btn">×</span>
+                    			</a>
+                    		</p>
+							<p>
+								<a href="#" class="button button-light pull-left">
+									猕猴桃
+									<span class="remove_btn">×</span>
+								</a>
+							</p>
+                    		<p>
+                    			<a href="#" class="button button-light pull-left">
+                    				红枣
+                					<span class="remove_btn">×</span>
+                    			</a>
+                    		</p>
+                    		<p>
+                    			<a href="#" class="button button-light pull-left">
+                    				潮流品牌
+                    				<span class="remove_btn">×</span>
+                    			</a>
+                    		</p>
+                    		<p>
+                    			<a href="#" class="button button-light pull-left">
+                    				男装
+                    				<span class="remove_btn">×</span>
+                    			</a>
+                    		</p>
+                    		<div class="clearfix"></div>
+                    	</div>
+                    	<div class="no_search">暂无搜索历史</div>
+                    </div>
+                    <div class="hot_search">
+                    	<p class="hot_tit">
+                    		<span class="icon icon-search"> 热门搜索</span>
+                    	</p>
+                    	<div class="hot_search_btn">
+                			<p><a href="#" class="button button-light pull-left">苹果</a></p>
+                    		<p><a href="#" class="button button-light pull-left">梨</a></p>
+                    		<p><a href="#" class="button button-light pull-left">橄榄油</a></p>
+                    		<p><a href="#" class="button button-light pull-left">猕猴桃</a></p>
+							<p><a href="#" class="button button-light pull-left">猕猴桃</a></p>
+                    		<p><a href="#" class="button button-light pull-left">红枣</a></p>
+                    		<p><a href="#" class="button button-light pull-left">潮流品牌</a></p>
+                    		<p><a href="#" class="button button-light pull-left">男装</a></p>
+                    		<div class="clearfix"></div>
+                    	</div>
+                    </div>
+                </div>                                  
+            </div>
+        </div>      
+    </div>
+    <script src="js/sm.js"></script>
+    <script src="js/sm-extend.js"></script> 
+    <script src="js/demos.js"></script>
+    <script>
+    	$('#rem').on('touchstart mousedown',function(e){
+			e.preventDefault()
+			$.confirm('确定删除记录?',function(){
+				$('.remove_btn').css('display','block')
+				$('.button-success').css('display','block')
+				});
+			})
+    	$('.button-success').on('touchstart mousedown',function(e){
+    		e.preventDefault()
+    		$('.remove_btn').css('display','none')
+    		$(this).css('display','none')
+    	})
+    	$('.remove_btn').on('touchstart mousedown',function(e){
+    		e.preventDefault()
+    		$(this).parent().parent("p").remove();
+    		var obj = document.getElementById('new_search_info');
+    		var n =obj.getElementsByTagName('p');
+    		if(n.length>0){
+    			$('.icon-remove').show()
+    		}else{
+    			$('.icon-remove').hide()
+    			$('.no_search').show()
+    		}
+
+    	})
+    	//加载时是否显示删除图标
+    	window.onload=function(){
+    		var obj = document.getElementById('new_search_info');
+    		var n =obj.getElementsByTagName('p');
+    		if(n.length>0){
+    			$('.icon-remove').show()
+    		}else{
+    			$('.icon-remove').hide()
+    			$('.no_search').show()
+    		}
+    	}
+    </script>
+
+</body>
+</html>

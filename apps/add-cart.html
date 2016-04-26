@@ -18,14 +18,31 @@
     <link rel="stylesheet" href="css/style.css"> 
     <script src="js/zepto.js"></script>
     <script src="js/config.js"></script>
+    <style>
+  	.cart-addnumber .icon-remove{display: none}
+  	#edit_btnbar{display: none}
+     
+ 	.icon-check{background-color:#d84a49;color:#fff;width:1.1rem;display:none;}
+  	.icon-check:before{font-size:14px;padding-left:.1rem;}
+  	#all_circle{background:#fff;}
+
+  	.item-media{width: 1.1rem;height: 1.1rem;position: relative;border-radius: 1.1rem;border: 1px solid #c7c7cc;overflow:hidden;}
+  	.number input::-webkit-outer-spin-button,
+	.number input::-webkit-inner-spin-button {-webkit-appearance: none !important;margin: 0;}
+	.number input{width:24px!important;float:left!important;height: 1.25rem!important;border-top: 1px solid #C5C5C5!important;
+    border-bottom: 1px solid #c5c5c5!important;}
+	.number a{display:block;border: none;width: 23px;color: #e5312a;font: 22px Arial bold;padding: 0;outline: none;}
+	.decrease{background: url('css/spinner-sf0d5bd965d.png') no-repeat;background-position: 0 -50px;cursor: pointer;text-indent: -10000px;float:left}
+	.increase{background: url('css/spinner-sf0d5bd965d.png') no-repeat;background-position: 0 0;cursor: pointer;text-indent: -10000px;float:left}
+    </style>
 </head>
 <body>
     <div class="page-group">
         <div class="page" id="cart-none">
             <header class="bar bar-nav">
                 <h1 class="title">购物车</h1>
-                 <a class="button button-link button-nav pull-right" href="#cart-all">
-                    <span>编辑</span>
+                 <a class="button button-link button-nav pull-right" ><!--href="#cart-all"-->
+                    <span class="edit_cart">编辑</span>
                 </a>
             </header>
             <nav class="bar bar-tab">
@@ -45,11 +62,11 @@
             <div class="content">
             <div class="see-cart"> 
                 <div class="list-block media-list" style="margin: 0;">
-                    <ul>
+                    <ul id="cart_list">
                         <li>
                           <label class="label-checkbox item-content">
                             <input type="checkbox" name="checkbox">
-                            <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                            <div class="item-media" onclick="tab(this)" id="one_circle"><span class="icon icon-check"></span></div>
                             <div class="item-inner">
                                 <div class="pull-left">
                                     <img src="images/product.jpg" width="80">
@@ -63,7 +80,12 @@
                                      <span class="mod-g-oprice">¥9698</span>
                                  </div>
                                  <div class="cart-addnumber">
-                                    <input type="text" class="spinner"/>
+                                    <div style="float:left" class="number col-100">
+										<a class="decrease" href="javascript:;" cartid="18">&nbsp;</a>
+										<input type="number" class="btn_num_val select_num_inp" maxlength="4" value="1" min="1" id="buy_amount_18">
+										<a class="increase" href="javascript:;" cartid="18">&nbsp;</a>
+									</div>
+                                    <span class="icon icon-remove pull-right"></span>
                                  </div>
                             </div>                           
                           </label>                          
@@ -71,7 +93,7 @@
                         <li>
                           <label class="label-checkbox item-content">
                             <input type="checkbox" name="checkbox">
-                            <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                            <div class="item-media" onclick="tab(this)"><span class="icon icon-check"></span></div>
                             <div class="item-inner">
                                 <div class="pull-left">
                                     <img src="images/product.jpg" width="80">
@@ -85,7 +107,12 @@
                                      <span class="mod-g-oprice">¥9698</span>
                                  </div>
                                  <div class="cart-addnumber">
-                                    <input type="text" class="spinner"/>
+                                    <div style="float:left" class="number col-100">
+										<a class="decrease" href="javascript:;" cartid="18">&nbsp;</a>
+										<input type="number" class="btn_num_val select_num_inp" maxlength="4" value="1" min="1" id="buy_amount_18">
+										<a class="increase" href="javascript:;" cartid="18">&nbsp;</a>
+									</div>
+                                    <span class="icon icon-remove pull-right"></span>
                                  </div>
                             </div>                           
                           </label>                          
@@ -93,7 +120,7 @@
                         <li>
                           <label class="label-checkbox item-content">
                             <input type="checkbox" name="checkbox">
-                            <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                            <div class="item-media" onclick="tab(this)"><span class="icon icon-check"></span></div>
                             <div class="item-inner">
                                 <div class="pull-left">
                                     <img src="images/product.jpg" width="80">
@@ -107,7 +134,12 @@
                                      <span class="mod-g-oprice">¥9698</span>
                                  </div>
                                  <div class="cart-addnumber">
-                                    <input type="text" class="spinner"/>
+                                    <div style="float:left" class="number col-100">
+										<a class="decrease" href="javascript:;" cartid="18">&nbsp;</a>
+										<input type="number" class="btn_num_val select_num_inp" maxlength="4" value="1" min="1" id="buy_amount_18">
+										<a class="increase" href="javascript:;" cartid="18">&nbsp;</a>
+									</div>
+                                    <span class="icon icon-remove pull-right"></span>
                                  </div>
                             </div>                           
                           </label>                          
@@ -115,7 +147,7 @@
                         <li>
                           <label class="label-checkbox item-content">
                             <input type="checkbox" name="checkbox">
-                            <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                            <div class="item-media" onclick="tab(this)"><span class="icon icon-check"></span></div>
                             <div class="item-inner">
                                 <div class="pull-left">
                                     <img src="images/product.jpg" width="80">
@@ -129,7 +161,12 @@
                                      <span class="mod-g-oprice">¥9698</span>
                                  </div>
                                  <div class="cart-addnumber">
-                                    <input type="text" class="spinner"/>
+                                    <div style="float:left" class="number col-100">
+										<a class="decrease" href="javascript:;" cartid="18">&nbsp;</a>
+										<input type="number" class="btn_num_val select_num_inp" maxlength="4" value="1" min="1" id="buy_amount_18">
+										<a class="increase" href="javascript:;" cartid="18">&nbsp;</a>
+									</div>
+                                    <span class="icon icon-remove pull-right"></span>
                                  </div>
                             </div>                           
                           </label>                          
@@ -137,7 +174,7 @@
                         <li>
                           <label class="label-checkbox item-content">
                             <input type="checkbox" name="checkbox">
-                            <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                            <div class="item-media" onclick="tab(this)"><span class="icon icon-check"></span></div>
                             <div class="item-inner">
                                 <div class="pull-left">
                                     <img src="images/product.jpg" width="80">
@@ -151,7 +188,12 @@
                                      <span class="mod-g-oprice">¥9698</span>
                                  </div>
                                  <div class="cart-addnumber">
-                                    <input type="text" class="spinner"/>
+                                    <div style="float:left" class="number col-100">
+										<a class="decrease" href="javascript:;" cartid="18">&nbsp;</a>
+										<input type="number" class="btn_num_val select_num_inp" maxlength="4" value="1" min="1" id="buy_amount_18">
+										<a class="increase" href="javascript:;" cartid="18">&nbsp;</a>
+									</div>
+                                    <span class="icon icon-remove pull-right"></span>
                                  </div>
                             </div>                           
                           </label>                          
@@ -159,7 +201,7 @@
                         <li>
                           <label class="label-checkbox item-content">
                             <input type="checkbox" name="checkbox">
-                            <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                            <div class="item-media" onclick="tab(this)"><span class="icon icon-check"></span></div>
                             <div class="item-inner">
                                 <div class="pull-left">
                                     <img src="images/product.jpg" width="80">
@@ -173,7 +215,12 @@
                                      <span class="mod-g-oprice">¥9698</span>
                                  </div>
                                  <div class="cart-addnumber">
-                                    <input type="text" class="spinner"/>
+                                    <div style="float:left" class="number col-100">
+										<a class="decrease" href="javascript:;" cartid="18">&nbsp;</a>
+										<input type="number" class="btn_num_val select_num_inp" maxlength="4" value="1" min="1" id="buy_amount_18">
+										<a class="increase" href="javascript:;" cartid="18">&nbsp;</a>
+									</div>
+                                    <span class="icon icon-remove pull-right"></span>
                                  </div>
                             </div>                           
                           </label>                          
@@ -181,7 +228,7 @@
                         <li>
                           <label class="label-checkbox item-content">
                             <input type="checkbox" name="checkbox">
-                            <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                            <div class="item-media" onclick="tab(this)"><span class="icon icon-check"></span></div>
                             <div class="item-inner">
                                 <div class="pull-left">
                                     <img src="images/product.jpg" width="80">
@@ -195,16 +242,22 @@
                                      <span class="mod-g-oprice">¥9698</span>
                                  </div>
                                  <div class="cart-addnumber">
-                                    <input type="text" class="spinner"/>
+                                    <div style="float:left" class="number col-100">
+										<a class="decrease" href="javascript:;" cartid="18">&nbsp;</a>
+										<input type="number" class="btn_num_val select_num_inp" maxlength="4" value="1" min="1" id="buy_amount_18">
+										<a class="increase" href="javascript:;" cartid="18">&nbsp;</a>
+									</div>
+                                    <span class="icon icon-remove pull-right"></span>
                                  </div>
                             </div>                           
                           </label>                          
                         </li>
                         <div class="h20"></div>
-                        <div class="see-btnbar">
+                        <div class="see-btnbar" id="normal_btnbar">
                             <label class="label-checkbox item-content">
-                                <input type="checkbox" name="checkbox">
-                                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                                <!--<input type="checkbox" name="checkbox">-->
+                                <div class="item-media" id="all_count"><span class="icon icon-check"></span></div>
+                                
                                 <div class="item-inner">
                                   <div class="item-title-row">
                                     <div class="item-title">合计</div>
@@ -217,212 +270,87 @@
                                 </div>                      
                             </label>   
                         </div>
+                        <div class="see-btnbar" id="edit_btnbar">
+                          <label class="label-checkbox item-content">
+                              <!--<input type="checkbox" name="checkbox">-->
+                              <div class="item-media" id="all_circle"><span class="icon icon-check"></span></div><span style="width: 5rem;margin-left: .2rem;">全选</span>
+                              <div style="width: 60%;display: block;"></div>
+                              <div class="item-inner"  style="background: #f8b62c;line-height: 2.2rem;text-align: center;padding-right:0;  ">
+                                   <a href="#" style="color: #fff;">添加到收藏夹</a>
+                              </div>
+                              <div class="cart-go">
+                                  <a href="buy-cart.html" external>结算</a>
+                              </div>                      
+                          </label>   
+                      </div>
                     </ul>                 
+                </div>
+                <!--购物车为空-->
+                <div class="no-car"> 
+                    <i class="icon icon-cart" style="font-size: 98px;"></i>
+                    <p class="notext">购物车还是空的</p>
+                    <p class="btnext">快去挑选几件喜欢的商品吧</p>
                 </div>
             </div>
             </div>         
         </div>
-        <div class="page" id="cart-all">
-            <header class="bar bar-nav">
-                <h1 class="title">购物车</h1>
-                 <a class="button button-link button-nav pull-right" href="buy-cart.html" external>
-                    <span>完成</span>
-                </a>
-            </header>
-            <nav class="bar bar-tab">
-                <a class="tab-item b-index" href="/app/" external>
-                    <span class="icon icon-home"></span>
-                    <span class="tab-label">首页</span>
-                </a>
-                <a class="tab-item" href="/app/#store-category">
-                    <span class="icon icon-computer"></span>
-                    <span class="tab-label">分类</span>
-                </a>
-                <a class="tab-item active" href="cart.html">
-                    <span class="icon icon-cart"></span>
-                    <span class="tab-label">购物车</span>
-                </a> 
-            </nav>
-            <div class="content">
-                <div class="see-cart"> 
-                    <div class="list-block media-list" style="margin: 0;">
-                        <ul>
-                            <li>
-                              <label class="label-checkbox item-content">
-                                <input type="checkbox" name="checkbox">
-                                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-                                <div class="item-inner">
-                                    <div class="pull-left">
-                                        <img src="images/product.jpg" width="80">
-                                    </div>
-                                    <div class="item-title-row">
-                                        <div class="item-title">美国碧根果五香味1千克装美国碧根果五香味1千克装</div> 
-                                    </div>
-                                    <div class="item-subtitle">规格：50g</div>
-                                    <div class="product-price">
-                                         <span class="mod-g-nprice">¥3698</span>
-                                         <span class="mod-g-oprice">¥9698</span>
-                                     </div>
-                                     <div class="cart-addnumber">
-                                        <input type="text" class="spinner"/>
-                                     </div>
-                                </div>                           
-                              </label>                          
-                            </li>
-                            <li>
-                              <label class="label-checkbox item-content">
-                                <input type="checkbox" name="checkbox">
-                                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-                                <div class="item-inner">
-                                    <div class="pull-left">
-                                        <img src="images/product.jpg" width="80">
-                                    </div>
-                                    <div class="item-title-row">
-                                        <div class="item-title">美国碧根果五香味1千克装美国碧根果五香味1千克装</div> 
-                                    </div>
-                                    <div class="item-subtitle">规格：50g</div>
-                                    <div class="product-price">
-                                         <span class="mod-g-nprice">¥3698</span>
-                                         <span class="mod-g-oprice">¥9698</span>
-                                     </div>
-                                     <div class="cart-addnumber">
-                                        <input type="text" class="spinner"/>
-                                     </div>
-                                </div>                           
-                              </label>                          
-                            </li>
-                            <li>
-                              <label class="label-checkbox item-content">
-                                <input type="checkbox" name="checkbox">
-                                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-                                <div class="item-inner">
-                                    <div class="pull-left">
-                                        <img src="images/product.jpg" width="80">
-                                    </div>
-                                    <div class="item-title-row">
-                                        <div class="item-title">美国碧根果五香味1千克装美国碧根果五香味1千克装</div> 
-                                    </div>
-                                    <div class="item-subtitle">规格：50g</div>
-                                    <div class="product-price">
-                                         <span class="mod-g-nprice">¥3698</span>
-                                         <span class="mod-g-oprice">¥9698</span>
-                                     </div>
-                                     <div class="cart-addnumber">
-                                        <input type="text" class="spinner"/>
-                                     </div>
-                                </div>                           
-                              </label>                          
-                            </li>
-                            <li>
-                              <label class="label-checkbox item-content">
-                                <input type="checkbox" name="checkbox">
-                                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-                                <div class="item-inner">
-                                    <div class="pull-left">
-                                        <img src="images/product.jpg" width="80">
-                                    </div>
-                                    <div class="item-title-row">
-                                        <div class="item-title">美国碧根果五香味1千克装美国碧根果五香味1千克装</div> 
-                                    </div>
-                                    <div class="item-subtitle">规格：50g</div>
-                                    <div class="product-price">
-                                         <span class="mod-g-nprice">¥3698</span>
-                                         <span class="mod-g-oprice">¥9698</span>
-                                     </div>
-                                     <div class="cart-addnumber">
-                                        <input type="text" class="spinner"/>
-                                     </div>
-                                </div>                           
-                              </label>                          
-                            </li>
-                            <li>
-                              <label class="label-checkbox item-content">
-                                <input type="checkbox" name="checkbox">
-                                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-                                <div class="item-inner">
-                                    <div class="pull-left">
-                                        <img src="images/product.jpg" width="80">
-                                    </div>
-                                    <div class="item-title-row">
-                                        <div class="item-title">美国碧根果五香味1千克装美国碧根果五香味1千克装</div> 
-                                    </div>
-                                    <div class="item-subtitle">规格：50g</div>
-                                    <div class="product-price">
-                                         <span class="mod-g-nprice">¥3698</span>
-                                         <span class="mod-g-oprice">¥9698</span>
-                                     </div>
-                                     <div class="cart-addnumber">
-                                        <input type="text" class="spinner"/>
-                                     </div>
-                                </div>                           
-                              </label>                          
-                            </li>
-                            <li>
-                              <label class="label-checkbox item-content">
-                                <input type="checkbox" name="checkbox">
-                                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-                                <div class="item-inner">
-                                    <div class="pull-left">
-                                        <img src="images/product.jpg" width="80">
-                                    </div>
-                                    <div class="item-title-row">
-                                        <div class="item-title">美国碧根果五香味1千克装美国碧根果五香味1千克装</div> 
-                                    </div>
-                                    <div class="item-subtitle">规格：50g</div>
-                                    <div class="product-price">
-                                         <span class="mod-g-nprice">¥3698</span>
-                                         <span class="mod-g-oprice">¥9698</span>
-                                     </div>
-                                     <div class="cart-addnumber">
-                                        <input type="text" class="spinner"/>
-                                     </div>
-                                </div>                           
-                              </label>                          
-                            </li>
-                            <li>
-                              <label class="label-checkbox item-content">
-                                <input type="checkbox" name="checkbox">
-                                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-                                <div class="item-inner">
-                                    <div class="pull-left">
-                                        <img src="images/product.jpg" width="80">
-                                    </div>
-                                    <div class="item-title-row">
-                                        <div class="item-title">美国碧根果五香味1千克装美国碧根果五香味1千克装</div> 
-                                    </div>
-                                    <div class="item-subtitle">规格：50g</div>
-                                    <div class="product-price">
-                                         <span class="mod-g-nprice">¥3698</span>
-                                         <span class="mod-g-oprice">¥9698</span>
-                                     </div>
-                                     <div class="cart-addnumber">
-                                        <input type="text" class="spinner"/>
-                                     </div>
-                                </div>                           
-                              </label>                          
-                            </li>
-                            <div class="h20"></div>
-                            <div class="see-btnbar">
-                                <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="checkbox">
-                                    <div class="item-media"><i class="icon icon-form-checkbox"></i>&nbsp;&nbsp;&nbsp;全选</div>
-                                    <div style="width: 60%;display: block;"></div>
-                                    <div class="item-inner"  style="background: #f8b62c;line-height: 2.2rem;text-align: center;padding-right:0;  ">
-                                         <a href="#" style="color: #fff;">添加到收藏夹</a>
-                                    </div>
-                                    <div class="cart-go">
-                                        <a href="buy-cart.html" external>结算</a>
-                                    </div>                      
-                                </label>   
-                            </div>
-                        </ul>                 
-                    </div>
-                </div>
-            </div>         
+        
+
+           
+       
         </div>
     </div>
     <script src="js/sm.js"></script>
     <script src="js/sm-extend.js"></script> 
     <script src="js/demos.js"></script>
+    <script>
+      $('.edit_cart').on('touchstart mousedown',function(e){
+          e.preventDefault()
+          $('.icon-remove').show();
+          $('#edit_btnbar').show();
+          $('#normal_btnbar').hide();
+        })
+      
+      $('.icon-remove').on('touchstart mousedown',function(e){
+          e.preventDefault()
+         
+            $(this).parent().parent().parent().parent('li').remove();
+            var obj =document.getElementById('cart_list');
+            var li =obj.getElementsByTagName('li');
+            if(li.length>0){
+              $('.no-car').hide();
+            }else{
+              $('.no-car').show();
+              $('.see-btnbar').hide();
+              $('.edit_cart').remove();
+          }
+          
+          
+      })
+      //判断页面加载购物车是否为空
+      window.onload =function(){
+        var obj =document.getElementById('cart_list');
+        var li =obj.getElementsByTagName('li');
+        if(li.length>0){
+          $('.no-car').hide()
+        }else{
+          $('.no-car').show();
+          $('.see-btnbar').hide();
+        }
+      }
+      //全选
+      $('#all_count').on('touchstart mousedown',function(e){
+      	e.preventDefault()
+      	$('.icon-check').toggle()
+      })
+      $('#all_circle').on('touchstart mousedown',function(e){
+      	e.preventDefault()
+      	$('.icon-check').toggle()
+      })
+     //单选
+     function tab(e){
+     	$(e).children('.icon-check').toggle()
+     }
+    </script>
 </body>
 </html>

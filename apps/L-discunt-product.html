@@ -17,11 +17,13 @@
     <script src="js/zepto.js"></script>
     <script src="js/config.js"></script>
 	<style>
-	#hour_show,#minute_show,#second_show{background-repeat: no-repeat;background-size: 100%;color: #fff;padding: .2rem;}
+	#hour_show,#minute_show,#second_show{background-repeat: no-repeat;background-size: 100% 100%;color: #fff;padding: .2rem;}
 	.pro-buy .col-33{text-align:center;color:#999}
 	.h20{min-height: 0.3125rem;display: block;background: #f2f2f2;width: 100%;}
 	.button-dark{width:30%;margin:0 auto;} 
 	.content-block{margin:.5rem 0 !important}
+	.star_active{color:red}
+	.icon-star:before{font-size: 20px!important;line-height: 18px!important;}
 	</style>
 </head>
 <body>
@@ -85,10 +87,10 @@
 						<span class="mod-g-oprice">原价 ：¥9698</span>
 					</div>
 					<div class="time-item" style="padding:.4rem">
-						剩余时间： <span id="hour_show" style="background-image: url(images/pic_time.png);">12</span>
-						时 <span id="minute_show" style="background-image: url(images/pic_time.png);">30</span>
+						剩余时间： <span id="hour_show" style="background-image: url(images/pic_time.png);">0</span>
+						时 <span id="minute_show" style="background-image: url(images/pic_time.png);">0</span>
 						分
-						<span id="second_show" style="background-image: url(images/pic_time.png);">06</span>
+						<span id="second_show" style="background-image: url(images/pic_time.png);">0</span>
 						秒
 					</div>
 					<div class="pro-buy row" style="border-top:1px solid #efefef;padding:.4rem">
@@ -117,6 +119,13 @@
 								<img src="images/member.jpg" alt="评论头像" class="com-pic">
 								<div class="com-right">
 									<span>Blinglee</span>
+									<span class="star_list" style="line-height:0">
+										<span class="star_active icon icon-star"></span>
+										<span class="icon icon-star"></span>
+										<span class="icon icon-star"></span>
+										<span class="icon icon-star"></span>
+										<span class="icon icon-star"></span>
+									</span>
 									<span class="pull-right">2016-03-17</span>
 									<p>味道不错，我喜欢吃，太喜欢吃了，都吃胖好多斤了</p>
 								</div>
@@ -149,12 +158,19 @@
 							</div>
 						  </div>
 						  <div id="tab3" class="tab">
-							<div class="content-block">
+							<div class="content-block" style="padding:0">
 								<ul>
 									<li class="com-list">
 										<img src="images/member.jpg" alt="评论头像" class="com-pic">
 										<div class="com-right">
 											<span>Blinglee</span>
+											<span class="star_list" style="line-height:0">
+												<span class="star_active icon icon-star"></span>
+												<span class="icon icon-star"></span>
+												<span class="icon icon-star"></span>
+												<span class="icon icon-star"></span>
+												<span class="icon icon-star"></span>
+											</span>
 											<span class="pull-right">2016-03-17</span>
 											<p>味道不错，我喜欢吃，太喜欢吃了，都吃胖好多斤了</p>
 										</div>
@@ -164,6 +180,13 @@
 										<img src="images/member.jpg" alt="评论头像" class="com-pic">
 										<div class="com-right">
 											<span>Blinglee</span>
+											<span class="star_list" style="line-height:0">
+												<span class="star_active icon icon-star"></span>
+												<span class="icon icon-star"></span>
+												<span class="icon icon-star"></span>
+												<span class="icon icon-star"></span>
+												<span class="icon icon-star"></span>
+											</span>
 											<span class="pull-right">2016-03-17</span>
 											<p>味道不错，我喜欢吃，太喜欢吃了，都吃胖好多斤了</p>
 										</div>
@@ -173,6 +196,13 @@
 										<img src="images/member.jpg" alt="评论头像" class="com-pic">
 										<div class="com-right">
 											<span>Blinglee</span>
+											<span class="star_list" style="line-height:0">
+												<span class="star_active icon icon-star"></span>
+												<span class="icon icon-star"></span>
+												<span class="icon icon-star"></span>
+												<span class="icon icon-star"></span>
+												<span class="icon icon-star"></span>
+											</span>
 											<span class="pull-right">2016-03-17</span>
 											<p>味道不错，我喜欢吃，太喜欢吃了，都吃胖好多斤了</p>
 										</div>
@@ -241,7 +271,7 @@
                 <h1 class="title">产品评论</h1>               
             </header>
             <div class="content">
-                <div class="content-block"  style="margin-top: 0;">
+                <div class="content-block"  style="margin-top: 0;padding:0">
                     <div class="infinite-scroll" data-distance="100" >
                         <div class="list-block media-list"  style="margin-top: 0;">
                             <ul class="list-product">
@@ -252,6 +282,13 @@
                                  <div class="item-inner">
                                      <div class="item-title-row">
                                          <div class="item-title">jdv**CD</div>
+										 <span class="star_list" style="line-height:0">
+											<span class="star_active icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+										</span>
                                          <div class="item-after">2016/04/01</div>
                                      </div>                                 
                                      <div class="item-text">此处是文本内容..此处是文本内容此处是文本内容此处是文本内容.</div>
@@ -264,6 +301,13 @@
                                  <div class="item-inner">
                                      <div class="item-title-row">
                                          <div class="item-title">jdv**CD</div>
+										 <span class="star_list" style="line-height:0">
+											<span class="star_active icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+										</span>
                                          <div class="item-after">2016/04/01</div>
                                      </div>                                 
                                      <div class="item-text">此处是文本内容..此处是文本内容此处是文本内容此处是文本内容.</div>
@@ -276,6 +320,13 @@
                                  <div class="item-inner">
                                      <div class="item-title-row">
                                          <div class="item-title">jdv**CD</div>
+										 <span class="star_list" style="line-height:0">
+											<span class="star_active icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+										</span>
                                          <div class="item-after">2016/04/01</div>
                                      </div>                                 
                                      <div class="item-text">此处是文本内容..此处是文本内容此处是文本内容此处是文本内容.</div>
@@ -288,6 +339,13 @@
                                  <div class="item-inner">
                                      <div class="item-title-row">
                                          <div class="item-title">jdv**CD</div>
+										 <span class="star_list" style="line-height:0">
+											<span class="star_active icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+										</span>
                                          <div class="item-after">2016/04/01</div>
                                      </div>                                 
                                      <div class="item-text">此处是文本内容..此处是文本内容此处是文本内容此处是文本内容.</div>
@@ -300,6 +358,13 @@
                                  <div class="item-inner">
                                      <div class="item-title-row">
                                          <div class="item-title">jdv**CD</div>
+										 <span class="star_list" style="line-height:0">
+											<span class="star_active icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+										</span>
                                          <div class="item-after">2016/04/01</div>
                                      </div>                                 
                                      <div class="item-text">此处是文本内容..此处是文本内容此处是文本内容此处是文本内容.</div>
@@ -312,6 +377,13 @@
                                  <div class="item-inner">
                                      <div class="item-title-row">
                                          <div class="item-title">jdv**CD</div>
+										 <span class="star_list" style="line-height:0">
+											<span class="star_active icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+										</span>
                                          <div class="item-after">2016/04/01</div>
                                      </div>                                 
                                      <div class="item-text">此处是文本内容..此处是文本内容此处是文本内容此处是文本内容.</div>
@@ -324,6 +396,13 @@
                                  <div class="item-inner">
                                      <div class="item-title-row">
                                          <div class="item-title">jdv**CD</div>
+										 <span class="star_list" style="line-height:0">
+											<span class="star_active icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+										</span>
                                          <div class="item-after">2016/04/01</div>
                                      </div>                                 
                                      <div class="item-text">此处是文本内容..此处是文本内容此处是文本内容此处是文本内容.</div>
@@ -336,6 +415,13 @@
                                  <div class="item-inner">
                                      <div class="item-title-row">
                                          <div class="item-title">jdv**CD</div>
+										 <span class="star_list" style="line-height:0">
+											<span class="star_active icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+										</span>
                                          <div class="item-after">2016/04/01</div>
                                      </div>                                 
                                      <div class="item-text">此处是文本内容..此处是文本内容此处是文本内容此处是文本内容.</div>
@@ -348,6 +434,13 @@
                                  <div class="item-inner">
                                      <div class="item-title-row">
                                          <div class="item-title">jdv**CD</div>
+										 <span class="star_list" style="line-height:0">
+											<span class="star_active icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+										</span>
                                          <div class="item-after">2016/04/01</div>
                                      </div>                                 
                                      <div class="item-text">此处是文本内容..此处是文本内容此处是文本内容此处是文本内容.</div>
@@ -360,6 +453,13 @@
                                  <div class="item-inner">
                                      <div class="item-title-row">
                                          <div class="item-title">jdv**CD</div>
+										 <span class="star_list" style="line-height:0">
+											<span class="star_active icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+										</span>
                                          <div class="item-after">2016/04/01</div>
                                      </div>                                 
                                      <div class="item-text">此处是文本内容..此处是文本内容此处是文本内容此处是文本内容.</div>
@@ -372,6 +472,13 @@
                                  <div class="item-inner">
                                      <div class="item-title-row">
                                          <div class="item-title">jdv**CD</div>
+										 <span class="star_list" style="line-height:0">
+											<span class="star_active icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+											<span class="icon icon-star"></span>
+										</span>
                                          <div class="item-after">2016/04/01</div>
                                      </div>                                 
                                      <div class="item-text">此处是文本内容..此处是文本内容此处是文本内容此处是文本内容.</div>
@@ -389,7 +496,34 @@
     <script src="js/sm-city-picker.js"></script>
     <script src="js/demos.js"></script>
 	<script>
-	
+		
+		var intDiff = parseInt(86400);//倒计时总秒数量
+
+		function timer(intDiff){
+			window.setInterval(function(){
+			var day=0,
+				hour=0,
+				minute=0,
+				second=0;//时间默认值		
+			if(intDiff > 0){
+				day = Math.floor(intDiff / (60 * 60 * 24));
+				hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+				minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+				second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+			}
+			if (minute <= 9) minute = '0' + minute;
+			if (second <= 9) second = '0' + second;
+			//$('#day_show').html(day+"天");
+			$('#hour_show').html('<s id="h"></s>'+hour+'');
+			$('#minute_show').html('<s></s>'+minute+'');
+			$('#second_show').html('<s></s>'+second+'');
+			intDiff--;
+			}, 1000);
+		} 
+
+		$(function(){
+			timer(intDiff);
+		});	
 	</script>
 </body>
 </html>

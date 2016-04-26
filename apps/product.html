@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="css/style.css"> 
     <script src="js/zepto.js"></script>
     <script src="js/config.js"></script>
+	<style>
+		.number input::-webkit-outer-spin-button,
+		.number input::-webkit-inner-spin-button {-webkit-appearance: none !important;margin: 0;}
+		.number input{width:24px;float:left}
+		.number a{display:block;border: none;width: 23px;color: #e5312a;font: 22px Arial bold;padding: 0;outline: none;}
+		.decrease{background: url('css/spinner-sf0d5bd965d.png') no-repeat;background-position: 0 -50px;cursor: pointer;text-indent: -10000px;float:left}
+		.increase{    background: url('css/spinner-sf0d5bd965d.png') no-repeat;background-position: 0 0;cursor: pointer;text-indent: -10000px;float:left}
+	</style>
 </head>
 <body>
     <div class="page-group" id="page-fixed-tab">
@@ -239,7 +247,13 @@
                         <div class="clearfix"></div>
                         <div class="number col-100">
                             <p>数量</p>
-                            <input type="text" class="spinner"/>
+                            	<div style="float:left">
+								<a class="decrease" href="javascript:;" cartid="18">&nbsp;</a>
+								<input type="number" class="btn_num_val select_num_inp" maxlength="4" value="1" min="1" id="buy_amount_18">
+								<a class="increase" href="javascript:;" cartid="18">&nbsp;</a>
+
+								<p style="margin-left: 75px">剩余库存：<span class="stocktips" id="ark_stock">0</span>件</p>
+								</div>
                         </div>
                         <div class="clearfix">
                             <div class="h20" style="background: #fff">
