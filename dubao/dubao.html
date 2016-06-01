@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>郑州晚报读报页</title>
+		<link rel="stylesheet" href="assets/agile/css/agile.layout.css">
+		<link rel="stylesheet" href="assets/third/seedsui/seedsui.min.css">
+		<link rel="stylesheet" href="assets/agile/css/style.css">
+		<style>
+			[data-role="slider"] img{ display: block;}
+			.agile-popup{background-color: #fff}
+			.popover-angle{background-color: #fff;bottom:-3%;left:27%;z-index:0;}
+			.agile-popup.center{bottom:20%;}
+		</style>
+	</head>
+	<body>
+		<div id="section_container">
+			<div id="section_container">
+			<section id="popup_section" data-role="section" class="active">
+				<header>
+		            <div class="topbar titlebar">
+		            	<a class="left" data-toggle="back">
+		                    <i class="icon icon-arrowleft"></i>
+		                </a>
+		                <h1 class="text-center">读报</h1>
+		            </div>
+		        </header>
+				<article  data-role="article" id="popup_article" class="active" style="top:44px;bottom:0px;background:#f3f3f3" data-scroll="pull">
+					<div class="scroller" style="width:auto;">
+						<div class="dubao_banshi"> 	
+							<img src="images/dubao-banshi.jpg" class="banshi_img">
+						</div>
+					</div>  
+					<div class="btn_list">
+						<ul class="grid" data-rowspace="8">
+							<li><a id="banshi_popup" class="btn_active">A11版</a></li>
+							<li><a href="dubao-contents.html" data-toggle="html">目录</a></li>
+							<li><a id="history_popup">往期</a></li>
+						</ul>
+					</div>	
+				</article>
+				<script type="text/html" id="banshi_popups">
+		        <div style="border-radius:4px">
+		            <div class="tanchuang"><ul class="grid" data-rowspace="8"><li style="width:25%"><a href="http://www.baidu.com">A01版</a></li><li style="width:25%"><a>A03版</a></li><li style="width:25%"><a>A04版</a></li><li style="width:25%;"><a>A05版</a></li><li style="width:25%"><a>A06版</a></li><li style="width:25%"><a>A07版</a></li><li style="width:25%"><a>A08版</a></li><li style="width:25%"><a>A09版</a></li><li style="width:25%"><a>A10版</a></li><li style="width:25%"><a class="btn_active">A11版</a></li><li style="width:25%"><a>A12版</a></li><li style="width:25%"><a>A13版</a></li><li style="width:25%"><a>A14版</a></li><li style="width:25%"><a>A15版</a></li><li style="width:25%"><a>A16版</a></li><li style="width:25%"><a>AA01版</a></li><li style="width:25%"><a>AA02版</a></li><li style="width:25%"><a>AA03版</a></li><li style="width:25%"><a>AA04版</a></li><li style="width:25%"><a>AA05版</a></li><li style="width:25%"><a>AA06版</a></li><li style="width:25%"><a>AA07版</a></li><li style="width:25%"><a>B01版</a></li><li style="width:25%"><a>B02版</a></li></ul></div>
+		            <div class="popover-angle"></div>
+		        </div>
+		    	</script>
+		    	<script type="text/html" id="history_popups">
+		        <div style="border-radius:4px">
+		            <div class="tanchuang"><ul class="grid" data-rowspace="8"><li style="width:50%"><a>2016-05-24</a></li><li style="width:50%"><a>2016-05-24</a></li><li style="width:50%"><a>2016-05-24</a></li><li style="width:50%"><a>2016-05-24</a></li><li style="width:50%"><a>2016-05-24</a></li><li style="width:50%"><a>2016-05-24</a></li><li style="width:50%"><a>2016-05-24</a></li><li style="width:50%"><a class="btn_active">2016-05-24</a></li><li style="width:50%"><a>2016-05-24</a></li><li style="width:50%"><a>2016-05-24</a></li></ul></div>
+		            <div class="popover-angle" style="left:70%"></div>
+		        </div>
+		    	</script>
+			</section>
+			</div>
+		</div>
+		
+		
+		<script src="assets/third/jquery/jquery-2.1.3.min.js"></script>
+		<script src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
+		
+		<script type="text/javascript" src="assets/agile/js/agile.js"></script>		
+		<script type="text/javascript" src="assets/bridge/exmobi.js"></script>
+		<script type="text/javascript" src="assets/bridge/agile.exmobi.js"></script>
+		<script type="text/javascript" src="assets/third/iscroll/iscroll-probe.js"></script>
+		<!-- app -->
+		<script type="text/javascript" src="assets/app/js/app.js"></script>
+		<script type="text/javascript" src="assets/third/seedsui/app.seedsui.js"></script>
+		<script type="text/javascript" src="assets/third/swipe-page.js"></script>
+		
+		<script>
+			(function(){
+			$('#banshi_popup').on(A.options.clickEvent, function(){
+				var $popup = A.popup({
+			   		html: $('#banshi_popups').html(),
+			        css : {width:'auto'},
+			        pos : 'center'
+			    });
+			});
+			$('#history_popup').on(A.options.clickEvent, function(){
+				var $popup = A.popup({
+			   		html: $('#history_popups').html(),
+			        css : {width:'auto'},
+			        pos : 'center'
+			    });
+			});
+
+
+			//悬浮按钮切换颜色
+			$('.btn_list li').on('touchstart mousedown',function(e){
+				e.preventDefault()
+				$('.btn_list .btn_active').removeClass('btn_active')
+				$(this).children().addClass('btn_active')
+			});
+			//上下拉刷新板式
+			//当refresh初始化会进入此监听
+			$('#popup_article').on('refreshInit', function(){
+				var refresh = A.Refresh(this);
+				//监听下拉刷新时间，可以做逻辑操作，当data-scroll="pullup"时无效
+				refresh.on('pulldown',function(){
+					$('#banshi_popup').text('A11版')
+					$('.banshi_img').attr('src','images/dubao-banshi.jpg')
+					refresh.refresh();//当scroll区域有dom结构变化需刷新
+				})
+				//监听上拉刷新事件，可以做一些逻辑操作，当data-scroll="pulldown"时无效
+				refresh.on('pullup', function(){
+					//$('.dubao_banshi').append('<img src="images/dubao-banshi.jpg" class="banshi_img">');
+					$('#banshi_popup').text('A12版')
+					$('.banshi_img').attr('src','images/qw.jpg')
+					refresh.refresh();//当scroll区域有dom结构变化需刷新
+				});
+			});
+			//左右滑动监听事件
+			$('#popup_article').bind('swipeleft',function(e){
+				location.href="dubao-contents.html"
+			})
+			$('#popup_article').bind('swiperight',function(e){
+				location.href="index.html"
+			})
+			})();
+			
+			
+		</script>
+		
+	</body>
+</html>

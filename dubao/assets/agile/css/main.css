@@ -1,0 +1,269 @@
+
+/* 轮播 */
+
+.swiper-pagination-bullet-active{
+	background-color: red!important
+}
+.swiper-container-horizontal>.swiper-pagination {
+	/*margin-bottom:.18rem;*/
+    margin-bottom: -.1rem;
+    margin-right: .23rem;
+}
+.swiper-pagination{
+	text-align: right!important;
+}
+
+/*专题页样式*/
+.all-container{
+	background-color:#f6f6f6;
+}
+.top-bar{
+	height:.9rem;
+	background-color: #fff;
+	display:block;
+}
+.topic-container{
+	height:5.2rem;
+	background-color:#fff;
+	margin-top:.12rem;
+	margin-bottom:.12rem;
+}
+.topic-tit{
+	margin-top:.3rem;
+	font-size:.4rem;
+	color:#696969;
+	margin-left:.18rem;
+	font-weight: bold;
+}
+.list-btn{
+	width:1.6rem;
+	display:block;
+	text-align:center;
+	line-height:.58rem;
+	font-size:.35rem;
+	color:#696969;
+	border-radius:.4rem;
+	border:.01rem solid #696969;
+	margin-left:.15rem;
+}
+.tab-topic{
+	margin-top:.62rem;
+	margin-bottom:.3rem;
+}
+.tab-topic a:hover{
+	border:.01rem solid #ee0c00;
+	color:#ee0c00;
+}
+.right_ico{
+	display: block;
+	height:.3rem;
+	width :.1rem;
+	background-color: #ef0c00;
+	float: left;
+	margin-top:.15rem;
+}
+.topic-info{
+	margin-top:.12rem;
+	height:.6rem;
+	background-color:#fff;
+	padding: .1rem .2rem;
+	border-bottom: solid 1px #e5e5e5
+}
+.road-tit{
+	font-size:.3rem;
+	color:#5a5a5a;
+	position: absolute;
+	margin-left:.25rem;
+	margin-top:-.02rem;
+}
+.list{
+	background-color:#fff;
+}
+.list li{
+	height:1.4rem;
+}
+
+/*图集页样式*/
+.tuji_list{
+	padding-top: .06rem;
+}
+.tuji_content{
+	height:4.7rem;
+	position: relative;
+}
+.tuji_div{
+	height:4.7rem;
+	width:7.5rem;
+	margin-top:-4.7rem;
+	position:absolute;
+	background-color:rgba(0, 0, 0, 0.35);
+}
+.tuji_tit{
+	margin-left: .42rem;
+	font-size: .36rem;
+	color:#fff;
+	width: 6.64rem;
+	margin-top: 1.82rem;
+}
+.tuji_time{
+	margin-top: .2rem;
+	font-size: .26rem;
+	color: #fff;
+}
+/*视频详情页样式*/
+.header .icon-pinglun,.tuji_header .icon-pinglun{
+	display: block;
+	float: right;
+	margin-top: .22rem;
+	color: #bbbbbb;
+	margin-right: .4rem;
+}
+.header .fenxiang,.tuji_header .fenxiang{
+	display: block;
+	float:right;
+	width: .54rem;
+	margin-top: .22rem;
+	margin-right:.18rem;
+}
+.tuji_header .pinglun-num,.header .pinglun-num{
+	margin-right:.7rem;
+	display: block;
+	padding-left: .7rem;
+	font-size: .45rem;
+	color: #bbbbbb;
+	background: url(../images/icon/icon-pinglun.svg) no-repeat;
+	background-size: 34%;
+}
+.info_tit{
+	width: 6.8rem;
+	font-size: .36rem;
+	color: #323232;
+	margin-left:.3rem;
+	line-height:.36rem;
+}
+.info_right{
+	width: .2rem;
+	height: .36rem;
+	float: left;
+	background-color: #ed0d00;
+	margin-right: .1rem
+}
+.info_btn{
+	width: 1.08rem;
+    height: 1.08rem;
+    margin-top: -3.16rem;
+    position: absolute;
+    margin-left: 3.2rem;
+}
+.radio_info{
+	height: 4.7rem;
+}
+.info_list{
+	margin-top: .9rem;
+}
+/*图集详情页*/
+.com-tit .pinglun-num{
+	margin-right:.7rem;
+	display: block;
+	padding-left: .44rem;
+	font-size: .3rem;
+	color: #bbbbbb;
+	background: url(../images/icon/icon-pinglun.svg) no-repeat;
+	background-size: 32%;
+	position: absolute;
+    margin-top: -.34rem;
+    margin-left: 5.8rem;
+}
+.notop_header{
+	margin-left:.18rem;
+}
+.info_notop{
+	margin-top: .9rem;
+}
+.pic_info{
+	margin-top: .14rem;
+}
+/*图文详情-多图页*/
+.duotu{
+	height: 4.7rem;
+}
+.duotu1{
+	width: 50%;
+	float: left;
+	height: 4.7rem;
+}
+.duotu2{
+	width: 50%;
+	float: right;
+	height: 4.7rem;
+}
+.duotu_words1{
+	font-size: .3rem;
+    color: #696969;
+    padding: .3rem .28rem;
+    letter-spacing: 1px;
+    line-height: .44rem;
+}
+/*图集详情*/
+.tuji_header .xiazai{
+	margin:.22rem .4rem .22rem 0;
+	width: .52rem;
+	height: .44rem;
+	float: right;
+}
+.tuji_header{
+	line-height: 0;
+}
+.tuji_banner{
+	height: 5.72rem;
+	margin-top:1.1rem;
+}
+.pic-tit{
+	font-size: .36rem;
+	color: #fefefe;
+	padding: .15rem
+}
+.pic-time{
+	font-size: .28rem;
+	color: #cecece;
+	padding:0 .15rem
+}
+.pic-con{
+	padding: .15rem
+}
+.pic-con li{
+	font-size: .3rem;
+	color: #cecece;
+	line-height: 1.7;
+	letter-spacing: 1px;
+	height: 5rem;
+	overflow: auto;
+}
+.pic-con li{
+	display: none
+}
+.pic-con li:first-child{
+	display: block;
+}
+.tuji_name{
+	position:absolute;
+	width:100%;
+	background-color: rgba(0,0,0,0.6);
+}
+.swiper-pagination-fraction{
+	font-size: .46rem!important;
+	color:#fff;
+}
+.swiper-pagination-current{
+	color:#fff;
+	font-size:.4rem;
+}
+.swiper-pagination-total{
+	font-size:.28rem;
+	color:#c1c1c1;
+}
+.tuji_notop{
+	width:1.42rem;
+	height:.56rem;
+	margin: .32rem auto 0 auto;
+}

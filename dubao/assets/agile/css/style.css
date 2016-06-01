@@ -1,0 +1,65 @@
+/*dubao*/
+.topbar .icon-arrowleft{
+    color: #919191
+}
+.topbar h1{
+    color: #919191
+}
+.banshi_img{
+    width: 100%
+}
+.dubao_banshi{
+    position: relative;
+}
+.popover_div{
+
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    background: rgba(0, 0, 0, 0.56);
+}
+.btn_list{
+    background: rgba(255,255,255,0.8);
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 14%;
+    left: 22%;
+    right: 22%;
+}
+.btn_active{
+    color:#ef2f2e!important;
+}
+.btn_list li{
+    padding-top: 4px!important;
+}
+.btn_list li:last-child{
+    padding-bottom: 4px!important;
+}
+.btn_list a{
+    color: #303030;
+}
+    /*弹窗*/
+    .tanchuang a{color:#8f8f8f;font-size:14px;}
+    .tanchuang li{border-right:1px solid #ccc;border-bottom: 1px solid #ccc;line-height:20px!important;padding-bottom: 6px}
+    .tanchuang .grid{border-radius:8px;overflow: hidden;}
+    .tanchuang .grid li:last-child{padding-bottom:6px!important;border-right: 0}
+    
+/*dubao-contents*/
+.dubao_list{
+    margin-top: 4px;
+}
+.left-block{
+    display: block;
+    width: 4px;
+    height: 14px;
+    background: red;
+    float: left;
+    margin-top: 4px;
+    margin-right: 8px;
+}
+.list_tit{
+    font-weight: bold;
+}
+.topbar a{color: #919191}
