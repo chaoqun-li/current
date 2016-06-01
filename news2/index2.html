@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>晚报首页</title>
+		<link rel="stylesheet" href="assets/agile/css/agile.layout.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/flat.component.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/flat.color.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/iconline.css">
+		<link rel="stylesheet" href="assets/agile/css/style.css">
+		<style>
+			[data-role="slider"] img{ display: block;}
+			.active{border-bottom:0!important;}
+			.tab{width: 18%!important;float: left!important;}
+			.clear{clear:both;}
+			.text{line-height: 22px;padding-left:10px;font-weight: bold;float: left;}
+
+			.outer { border:1px solid #ccc; border-radius: 6px;}
+			.accordionbar { display: block;background-color: #fff; color: #444;width:8%;float:right;margin-top:4%;}
+			.accordionbar.active { color:#aaa;}
+			.hide_panel{display: block;background-color: #fff; color: #444;}
+
+			.index_div{position:relative;}
+			
+			[data-role="accordion"]{
+				overflow: hidden;
+				height: 0px;
+				/*可以适当加一些动画*/
+				z-index: 10;
+				-webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+				-moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+				-o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+				-ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+				transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+			}/* 必须为被控制的组件添加默认样式不显示*/
+			[data-role="accordion"].active{
+				border-bottom:1px solid #ccc;
+				height:90px;
+				/*可以适当加一些动画*/
+				-webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+				-moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+				-o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+				-ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+				transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+				box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+			}/* 必须为被控制的组件添加active样式，显示组件*/
+			
+			[data-role="accordionone"]{	
+				display: none;
+			}/* 必须为被控制的组件添加默认样式不显示*/
+			[data-role="accordionone"].active{
+				display: block;
+			}/* 必须为被控制的组件添加active样式，显示组件*/
+		
+		</style>
+	</head>
+	<body>
+		<div id="section_container">
+			<section id="slider_section" data-role="section" class="active" data-aside-left="#left_reveal_aside">
+				<header>
+					<a href="https://www.baidu.com/">
+						<img src="images/index-top.jpg" class="index-topAD">
+					</a>
+					<a href=""><img src="images/index-tops.jpg" class="index-topsAD" id="index-topsAD"></a>
+					<div class="index_hideAD">
+						<div class="hideAD_tip">广告</div>
+						<a href="javascript:;"><p>东风日产全新轩逸 税费全免限时享</p></a>
+						<span class="iconfont iconline-arrow-down"></span>
+					</div>
+
+					
+					<div class="header-logo">
+						<img src="images/logo.png">
+					</div>
+				    <div class="index-tit titlebar" style="background-color:#fff">
+				    	<div class="tit-grid grid" data-col="4">
+							<div class="grid-cell">
+								<a href="javascript:;" class="tit-active">新闻</a>
+							</div>
+							<div class="grid-cell">
+								<a href="javascript:;">发现</a>
+							</div>
+							<div class="grid-cell">
+								<a href="javascript:;">便民</a>
+							</div>
+							<div class="grid-cell">
+								<a href="javascript:;">互动</a>
+							</div>
+						</div>
+				    </div>
+				    
+
+				    <div class="outer">
+				    	<div class="hide_panel">
+				    		<a class="tab active" data-role="tab" href="#page1" data-toggle="page">头条</a>
+				    		<a class="tab" data-role="tab" href="#page2" data-toggle="page">图集</a>
+					    	<a class="tab" data-role="tab" href="#page3" data-toggle="page">视频</a>
+					    	<a class="tab" data-role="tab" href="#page4" data-toggle="page">前沿</a>
+					    	<a class="tab" data-role="tab" href="#page5" data-toggle="page">教育</a>
+					    	
+							<a class="accordionbar" data-role="accordionbar" data-toggle="accordion" href="#accordion1">
+								<span class="iconfont iconline-arrow-down"></span>
+							</a>
+							<div class="clear"></div>
+						</div>
+						<div data-role="accordion" id="accordion1" class="index-list listitem">
+							<a class="tab" data-role="tab" href="#page6" data-toggle="page">段子</a>
+							<a class="tab" data-role="tab" href="#page7" data-toggle="page">健康</a>
+							<a class="tab" data-role="tab" href="#page8" data-toggle="page">房产</a>
+							<a class="tab" data-role="tab" href="#page9" data-toggle="page">游玩</a>
+							<a class="tab" data-role="tab" href="#page10" data-toggle="page">原创</a>
+							<a class="tab" data-role="tab" href="#page11" data-toggle="page">专题</a>
+							<a class="tab" data-role="tab" href="#page12" data-toggle="page">本地</a>
+							<a class="tab" data-role="tab" href="#page13" data-toggle="page">吃货</a>
+						</div>
+					</div>
+							
+				    <!--<div id="tabbarOuter" data-scroll="horizontal">
+				    	<div class="scroller" style="width:500px;">
+						    <div class="index-tab tabbar" style="width:100%;">
+						    	<a class="tab active" data-role="tab" href="#page1" data-toggle="page">头条</a>
+						    	<a class="tab" data-role="tab" href="#page2" data-toggle="page">观点</a>
+						    	<a class="tab" data-role="tab" href="#page3" data-toggle="page">世界</a>
+						    	<a class="tab" data-role="tab" href="#page4" data-toggle="page">前沿</a>
+						    	<a class="tab" data-role="tab" href="#page5" data-toggle="page">教育</a>
+						    	<a class="tab" data-role="tab" href="#page6" data-toggle="page">段子</a>
+						    	<a class="tab" data-role="tab" href="#page7" data-toggle="page">健康</a>
+						    	<a class="tab" data-role="tab">房产</a>
+						    </div>
+					    </div>
+				    </div>-->
+				</header>
+				<article data-role="article" id="main_article" class="active" style="top:232px;bottom:0;overflow: hidden;">
+					<div id="sliderPage" data-role="slider" class="full">
+						<div class="scroller" id="tops">
+							<div id="page1" class="slide" data-role="page" data-scroll="pullup">
+								<div class="scroller">
+									<div id="slide" data-role="slider" class="full" style="overflow: hidden; height:180px;">
+										<div class="scroller">
+											<div class="slide">
+												<img src="images/pic.jpg" class="full-width"/>
+												<div class="slider_label">奥斯卡红毯 小李凯特携手重聚</div>
+											</div>
+											<div class="slide">
+												<img src="images/pic.jpg" class="full-width"/>
+												<div class="slider_label">奥斯卡红毯 小李凯特携手重聚</div>
+											</div>
+											<div class="slide">
+												<img src="images/pic.jpg" class="full-width"/>
+												<div class="slider_label">奥斯卡红毯 小李凯特携手重聚</div>
+											</div>
+										</div>
+									</div>
+									<ul class="listitem" id="content">
+								        <li>
+								        	<a href="javascript:;" data-toggle="html">
+									        	<span class="list-left">活动</span>
+									            <div class="text">
+									            	《叶问3》免费看！
+									            </div>
+									            <span class="iconfont iconline-view"> 280</span>
+								            </a>
+								        </li>
+								        
+								        <li>
+								        	<a href="javascript:;" data-toggle="html">
+									        	<span class="list-left2">普通</span>
+									            <div class="text">
+									            	现在已经开始这样看新闻了！
+									            </div>
+									            <span class="iconfont iconline-view"> 280</span>
+								            </a>
+								        </li>
+								        <li>
+									        <a href="#pic-info" data-toggle="html">
+									        	<img src="images/p1.jpg" style="width:90px;" class="img">
+									            <div class="list-right">
+									            	<p>想知道郑州两会都说啥了看这里啊带你去</p>
+									            	<div class="list-time">
+									            		<div class="list-left3">专题</div>
+									            		<span>3小时前</span>
+									            		<span class="iconfont iconline-view"> 280</span>
+									            	</div>
+									            </div>
+								            </a>
+								        </li>
+								        <li>
+								        	<a href="#" data-toggle="html">
+									        	<p class="pics-ADtit">
+									        		郑州一家人去上海迪士尼需要多少钱
+									        		<div class="list-left4">专题</div>
+									        	</p>
+								        		<img src="images/广告位-02.jpg" class="list_ADimg">
+									            <div class="list-time">
+								            		<span>3小时前</span>
+								            		<span class="iconfont iconline-view"> 280</span>
+								            	</div>
+							            	</a>
+								        </li>
+								        <li>
+									        <a href="#pic-info" data-toggle="html">
+									        	<img src="images/p1.jpg" style="width:90px;" class="img">
+									            <div class="list-right">
+									            	<p>想知道郑州两会都说啥了看这里啊带你去</p>
+									            	<div class="list-time">
+									            		<span>3小时前</span>
+									            		<span class="iconfont iconline-view"> 280</span>
+									            	</div>
+									            </div>
+								            </a>
+								        </li>
+								        <li>
+								        	<a href="#duotu-info" data-toggle="html">
+									        	<p class="pics-tit">
+									        		河南一中学放学时一辆白色夜车冲进校园乱撞，警方：疑犯已抓获
+									        	</p>
+									        	<div class="grid" data-col="3">
+									        		<div class="grid-cell">
+										        		<img src="images/p2.jpg" style="width:96%;">
+										        	</div>
+										        	<div class="grid-cell">
+										        		<img src="images/p3.jpg" style="width:96%;">
+										        	</div>
+										        	<div class="grid-cell">
+										        		<img src="images/p4.jpg" style="width:96%;">
+										        	</div>
+									        	</div>
+									            <div class="list-time">
+								            		<span>3小时前</span>
+								            		<span class="iconfont iconline-view"> 280</span>
+								            	</div>
+							            	</a>
+								        </li>
+								        <li>
+								        	<a href="#duotu-info" data-toggle="html">
+									        	<p class="pics-tit">
+									        		河南一中学放学时一辆白色夜车冲进校园乱撞，警方：疑犯已抓获
+									        	</p>
+									        	<div class="grid" data-col="3">
+									        		<div class="grid-cell">
+										        		<img src="images/p2.jpg" style="width:96%;">
+										        	</div>
+										        	<div class="grid-cell">
+										        		<img src="images/p3.jpg" style="width:96%;">
+										        	</div>
+										        	<div class="grid-cell">
+										        		<img src="images/p4.jpg" style="width:96%;">
+										        	</div>
+									        	</div>
+									            <div class="list-time">
+								            		<span>3小时前</span>
+								            		<span class="iconfont iconline-view"> 280</span>
+								            	</div>
+							            	</a>
+								        </li>
+								        <li>
+								        	<a href="#duotu-info" data-toggle="html">
+									        	<p class="pics-tit">
+									        		河南一中学放学时一辆白色夜车冲进校园乱撞，警方：疑犯已抓获
+									        	</p>
+									        	<div class="grid" data-col="3">
+									        		<div class="grid-cell">
+										        		<img src="images/p2.jpg" style="width:96%;">
+										        	</div>
+										        	<div class="grid-cell">
+										        		<img src="images/p3.jpg" style="width:96%;">
+										        	</div>
+										        	<div class="grid-cell">
+										        		<img src="images/p4.jpg" style="width:96%;">
+										        	</div>
+									        	</div>
+									            <div class="list-time">
+								            		<span>3小时前</span>
+								            		<span class="iconfont iconline-view"> 280</span>
+								            	</div>
+							            	</a>
+								        </li>
+								        <li>
+								        	<a href="duotu-info" data-toggle="html">
+									        	<p class="pics-tit">
+									        		河南一中学放学时一辆白色夜车冲进校园乱撞，警方：疑犯已抓获
+									        	</p>
+									        	<div class="grid" data-col="3">
+									        		<div class="grid-cell">
+										        		<img src="images/p2.jpg" style="width:96%;">
+										        	</div>
+										        	<div class="grid-cell">
+										        		<img src="images/p3.jpg" style="width:96%;">
+										        	</div>
+										        	<div class="grid-cell">
+										        		<img src="images/p4.jpg" style="width:96%;">
+										        	</div>
+									        	</div>
+									            <div class="list-time">
+								            		<span>3小时前</span>
+								            		<span class="iconfont iconline-view"> 280</span>
+								            	</div>
+							            	</a>
+								        </li>
+								        <li>
+								        	<a href="duotu-info" data-toggle="html">
+									        	<p class="pics-tit">
+									        		河南一中学放学时一辆白色夜车冲进校园乱撞，警方：疑犯已抓获
+									        	</p>
+									        	<div class="grid" data-col="3">
+									        		<div class="grid-cell">
+										        		<img src="images/p2.jpg" style="width:96%;">
+										        	</div>
+										        	<div class="grid-cell">
+										        		<img src="images/p3.jpg" style="width:96%;">
+										        	</div>
+										        	<div class="grid-cell">
+										        		<img src="images/p4.jpg" style="width:96%;">
+										        	</div>
+									        	</div>
+									            <div class="list-time">
+								            		<span>3小时前</span>
+								            		<span class="iconfont iconline-view"> 280</span>
+								            	</div>
+							            	</a>
+								        </li>
+							    	</ul>
+						    	</div>
+							</div>
+							<div id="page2" class="slide" data-role="page" data-scroll="pullup">
+								<div class="scroller">
+									<div id="content1">
+										<div class="tuji_content">
+											<a href="#tuji-info" data-toggle="html">
+												<img src="images/tuji1.jpg">
+												<div class="tuji_div">
+													<div class="tuji_tit">
+														曝撒贝宁求婚成功 小撒外国女友李白资料美照曝光
+														<p class="tuji_time">2016/03/02 06:53</p>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="tuji_content">
+											<a href="#tuji-info" data-toggle="html">
+												<img src="images/tuji2.jpg">
+												<div class="tuji_div">
+													<div class="tuji_tit">
+														极寒天气下的采藕人:月入过万 累了就在冰里休息
+														<p class="tuji_time">2016/03/02 06:53</p>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="tuji_content">
+											<a href="#tuji-info" data-toggle="html">
+												<img src="images/tuji3.jpg">
+												<div class="tuji_div">
+													<div class="tuji_tit">
+														戴牙套矫正牙齿的汪星人 萌萌哒
+														<p class="tuji_time">2016/03/02 06:53</p>
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+							    </div>
+							</div>
+							<div id="page3" class="slide" data-role="page" data-scroll="pullup">
+								<div class="scroller">
+									<div id="content2">
+										<a href="#radio-info" data-toggle="html">
+											<div class="bofang_content">
+												<video id="video1" poster="images/radio1.png">
+													<source src="">
+													<source src="">
+												</video>
+												<button class="iconfont iconline-media-play"></button>
+												<div class="bofang_time">2分10秒</div>
+												<div class="bofang_tit">
+													<p>艾弗森最新视频</p>
+													<span class="iconfont iconline-view"> 1208</span>
+												</div>
+											</div>
+										</a>
+										<a href="#radio-info" data-toggle="html">
+											<div class="bofang_content">
+												<video id="video1" poster="images/radio1.png">
+													<source src="">
+													<source src="">
+												</video>
+												<button class="iconfont iconline-media-play"></button>
+												<div class="bofang_time">2分10秒</div>
+												<div class="bofang_tit">
+													<p>艾弗森最新视频</p>
+													<span class="iconfont iconline-view"> 1208</span>
+												</div>
+											</div>
+										</a>
+										<a href="#radio-info" data-toggle="html">
+											<div class="bofang_content">
+												<video id="video1" poster="images/radio1.png">
+													<source src="">
+													<source src="">
+												</video>
+												<button class="iconfont iconline-media-play"></button>
+												<div class="bofang_time">2分10秒</div>
+												<div class="bofang_tit">
+													<p>艾弗森最新视频</p>
+													<span class="iconfont iconline-view"> 1208</span>
+												</div>
+											</div>
+										</a>
+										<a href="#radio-info" data-toggle="html">
+											<div class="bofang_content">
+												<video id="video1" poster="images/radio1.png">
+													<source src="">
+													<source src="">
+												</video>
+												<button class="iconfont iconline-media-play"></button>
+												<div class="bofang_time">2分10秒</div>
+												<div class="bofang_tit">
+													<p>艾弗森最新视频</p>
+													<span class="iconfont iconline-view"> 1208</span>
+												</div>
+											</div>
+										</a>
+									</div>
+							    </div>
+							</div>
+							<div id="page4" class="slide" data-role="page" data-scroll="pullup">
+							<div class="scroller">
+								这是第4个page
+						    </div>
+							</div>
+							<div id="page5" class="slide" data-role="page" data-scroll="pullup">
+								<div class="scroller">
+									这是第5个page
+							    </div>
+							</div>
+							<div id="page6" class="slide" data-role="page" data-scroll="pullup">
+								<div class="scroller">
+									这是第6个page
+							    </div>
+							</div>
+							<div id="page7" class="slide" data-role="page" data-scroll="pullup">
+								<div class="scroller">
+									这是第7个page
+							    </div>
+							</div>
+							<div id="page8" class="slide" data-role="page" data-scroll="pullup">
+								<div class="scroller">
+									这是第8个page
+							    </div>
+							</div>
+							<div id="page9" class="slide" data-role="page" data-scroll="pullup">
+								<div class="scroller">
+									这是第9个page
+							    </div>
+							</div>
+							<div id="page10" class="slide" data-role="page" data-scroll="pullup">
+								<div class="scroller">
+									这是第10个page
+							    </div>
+							</div>
+							<div id="page11" class="slide" data-role="page" data-scroll="pullup">
+								<div class="scroller">
+									<ul class="listitem" id="content">
+								        <li>
+									        <a href="javascript:;">
+									        	<img src="images/p1.jpg" style="width:90px;" class="img">
+									            <div class="list-right">
+									            	<p>想知道郑州两会都说啥了看这里啊带你去</p>
+									            	<div class="list-time">
+									            		<span>3小时前</span>
+									            		<span class="iconfont iconline-view"> 280</span>
+									            	</div>
+									            </div>
+								            </a>
+								        </li>
+								        <li>
+									        <a href="javascript:;">
+									        	<img src="images/p1.jpg" style="width:90px;" class="img">
+									            <div class="list-right">
+									            	<p>想知道郑州两会都说啥了看这里啊带你去</p>
+									            	<div class="list-time">
+									            		<span>3小时前</span>
+									            		<span class="iconfont iconline-view"> 280</span>
+									            	</div>
+									            </div>
+								            </a>
+								        </li>
+								        <li>
+									        <a href="javascript:;">
+									        	<img src="images/p1.jpg" style="width:90px;" class="img">
+									            <div class="list-right">
+									            	<p>想知道郑州两会都说啥了看这里啊带你去</p>
+									            	<div class="list-time">
+									            		<span>3小时前</span>
+									            		<span class="iconfont iconline-view"> 280</span>
+									            	</div>
+									            </div>
+								            </a>
+								        </li>
+								        <li>
+									        <a href="javascript:;">
+									        	<img src="images/p1.jpg" style="width:90px;" class="img">
+									            <div class="list-right">
+									            	<p>想知道郑州两会都说啥了看这里啊带你去</p>
+									            	<div class="list-time">
+									            		<span>3小时前</span>
+									            		<span class="iconfont iconline-view"> 280</span>
+									            	</div>
+									            </div>
+								            </a>
+								        </li>
+							    	</ul>
+							    </div>
+							</div>
+							<div id="page12" class="slide" data-role="page" data-scroll="pullup">
+								<div class="scroller">
+									这是第12个page
+							    </div>
+							</div>
+							<div id="page13" class="slide" data-role="page" data-scroll="pullup">
+								<div class="scroller">
+									这是第13个page
+							    </div>
+							</div>
+						</div>
+					</div>
+					<a class="top_btn" >
+						<span class="iconfont iconline-arrow-toup"></span>
+					</a>
+				</article>
+				<script type="text/html" id="index_AD">
+					<div style="height:21.2rem">
+						<div class="index_div">
+							<img src="images/广告位-01.jpg" style="width:100%">
+							<div class="AD_rem">
+								<span class="iconfont iconline-mark-no"></span>
+							</div>
+							<div class="AD_bangding">
+								<a href="">马上绑定</a>
+							</div>
+						</div>
+					</div>
+				</script>
+				<!--<footer>
+					<div class="footer_words">Copyright&2013 郑州晚报</div>
+				</footer>-->
+			</section>
+		</div>
+		
+		
+		<script src="assets/third/jquery/jquery-2.1.3.min.js"></script>
+		<script src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
+		<script src="assets/third/iscroll/iscroll-probe.js"></script>
+		<script src="assets/third/arttemplate/template-native.js"></script>
+		
+		<script type="text/javascript" src="assets/agile/js/agile.js"></script>		
+		
+		<script type="text/javascript" src="assets/bridge/exmobi.js"></script>
+		<script type="text/javascript" src="assets/bridge/agile.exmobi.js"></script>
+		<!-- app -->
+		<script type="text/javascript" src="assets/app/js/app.js"></script>
+		<script>
+		
+			$('#slider_section').on('sectionshow', function(){
+				A.Component.scroll('#tabbarOuter');
+			});
+			$('#main_article').on('articleload', function(){
+				A.Slider('#slide', {
+					dots : 'right'
+				});			
+				A.Slider('#sliderPage', {
+					dots : 'hide'
+				});
+			});
+			$('#slide img').on(A.options.clickEvent, function(){
+				//var $el = $(this);
+				//A.showToast($el.siblings('.slider_label').html());
+				A.Component.pictureShow({
+					id : 'picture',
+					index : $("#slide .slide").index($("#slide .slide.active")),
+					title : '这是默认标题',
+					list : [
+						{
+							imgURL : 'res:page/www/assets/app/img/slide1.jpg',
+							content : '这是第一条新闻'
+						},
+						{
+							imgURL : 'res:page/www/assets/app/img/slide2.jpg',
+							content : '这是第二条新闻'
+						},
+						{
+							imgURL : 'res:page/www/assets/app/img/slide3.jpg',
+							content : '这是第三条新闻'
+						}
+					]
+				});
+			});
+	        //新增控制器折叠面板
+			(function(){
+				//[必须]添加accordion控制器
+				A.Controller.add({
+					accordion : {
+						selector : '[data-toggle="accordion"]',
+						isToggle : true //仅控制目标显隐
+					},
+					accordionone : { 
+						selector : '[data-toggle="accordionone"]',
+					}
+				});
+				//[可选]添加accordionbar组件，只有在组件有样式切换的时候需要添加，本例不添加
+				
+				A.Component.add({
+					accordionbar : {
+						selector : '[data-role="accordionbar"]',
+						isToggle : true
+					}
+				});
+				
+				
+			})();
+			//当refresh初始化会进入此监听
+			$('#page1').on('refreshInit', function(){
+				var refresh = A.Refresh(this);
+				//监听下拉刷新事件，可以做一些逻辑操作，当data-scroll="pullup"时无效
+				refresh.on('pulldown', function(){
+					$('#content').prepend('<li><div class="text">下拉刷新的内容</div></li>');
+					refresh.refresh();//当scroll区域有dom结构变化需刷新
+				});
+				//监听上拉刷新事件，可以做一些逻辑操作，当data-scroll="pulldown"时无效
+				refresh.on('pullup', function(){
+					$('#content').append('<li><a href="#duotu-info" data-toggle="html"><p class="pics-tit">河南一中学放学时一辆白色夜车冲进校园乱撞，警方：疑犯已抓获</p><div class="grid" data-col="3"><div class="grid-cell"><img src="images/p2.jpg" style="width:96%;"></div><div class="grid-cell"><img src="images/p3.jpg" style="width:96%;"></div><div class="grid-cell"><img src="images/p4.jpg" style="width:96%;"></div></div><div class="list-time"><span>3小时前</span><span class="iconfont iconline-view"> 280</span></div></a></li><li><a href="#duotu-info" data-toggle="html"><p class="pics-tit">河南一中学放学时一辆白色夜车冲进校园乱撞，警方：疑犯已抓获</p><div class="grid" data-col="3"><div class="grid-cell"><img src="images/p2.jpg" style="width:96%;"></div><div class="grid-cell"><img src="images/p3.jpg" style="width:96%;"></div><div class="grid-cell"><img src="images/p4.jpg" style="width:96%;"></div></div><div class="list-time"><span>3小时前</span><span class="iconfont iconline-view"> 280</span></div></a></li>');
+					refresh.refresh();//当scroll区域有dom结构变化需刷新
+				});
+			});
+			//顶部导航状态切换
+			$('.tit-grid a').on('touchstart mousedown',function(e){
+				e.preventDefault()
+				$('.tit-grid .tit-active').removeClass('tit-active')
+				$(this).addClass('tit-active')
+			})
+			$('.index-list a').on('touchstart mousedown',function(e){
+				e.preventDefault()
+				$('.hide_panel a').removeClass('active')
+			})
+			$('.hide_panel a').on('touchstart mousedown',function(e){
+				e.preventDefault()
+				$('.index-list a').removeClass('active')
+			})
+			//首页弹窗广告
+			window.onload=function(){
+				var $popup=A.popup({
+					html:$('#index_AD').html(),
+					pos:'center'
+				});
+				$('.iconline-mark-no').on('touchstart mousedown',function(e){
+					e.preventDefault()
+					$popup.close();
+				})
+			}
+			//置顶
+			$('#page1,#page2,#page3,#page4,#page5,#page6,#page7,#page8,#page9,#page10,#page11,#page12,#page13').on('refreshInit', function () {
+	            var scroll = A.Scroll(this);
+	            $('.top_btn').on(A.options.clickEvent, function () {
+	                scroll.scrollToElement(document.querySelector("#tops"));
+	                
+	                return false;
+	            });
+        	});
+			//顶部广告
+			var iconNow=true;
+			$('.index_hideAD .iconline-arrow-down').on(A.options.clickEvent, function(){
+				if(iconNow){
+					$('.index_hideAD .iconline-arrow-down').css('-webkit-transform','rotate(180deg)');
+					$('#main_article').css('top','400px')
+					iconNow=false;
+				}else{
+					$('.index_hideAD .iconline-arrow-down').css('-webkit-transform','rotate(0deg)');
+					$('#main_article').css('top','232px')
+					iconNow=true;
+				}
+				$('#index-topsAD').toggle(10)
+			})
+
+
+			
+		</script>
+		
+	</body>
+</html>

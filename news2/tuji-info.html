@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>晚报图集情页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="assets/agile/css/flat/iconline.css">
+	<link rel="stylesheet" type="text/css" href="assets/agile/css/common.css">
+	<link rel="stylesheet" type="text/css" href="assets/agile/css/main.css">
+	<link rel="stylesheet" type="text/css" href="assets/agile/css/swiper-3.3.1.min.css">
+
+
+	<script type="text/javascript" src="assets/third/jquery/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="assets/agile/js/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/agile/js/agile.js"></script>	
+	<style>
+		.iconline-arrow-left,.iconline-share,.iconline-box-in,.iconline-chat-bubble{font-size:24px;color:#bbb;}
+		.back{display: block;float: left;margin-top: .22rem;}
+		.clear{clear:both;}
+	</style>
+	<script type="text/javascript">
+    new function (){
+       var _self = this;
+       _self.width = 750;
+       _self.fontSize = 100;
+       _self.widthProportion = function(){var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.32?0.32:p;};
+       _self.changePage = function(){
+           document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+       }
+       _self.changePage(); 
+       window.addEventListener('resize',function(){_self.changePage();},false);
+    };
+</script>
+</head>
+<body style="background-color:#000">
+	<!-- 头部 -->
+	<div class="tuji_header">
+		<a class="back" href="javascript:history.go(-1)">
+			<span class="iconfont iconline-arrow-left"></span>
+		</a>
+		<a class="fenxiang" href="javascript:;">
+			<span class="iconfont iconline-share"></span>
+		</a>
+		<a class="xiazai" href="javascript:;">
+			<span class="iconfont iconline-box-in"></span>
+		</a>
+		<a class="icon-pinglun" href="pinglun.html">
+			<span class="iconfont iconline-chat-bubble">2306</span>
+		</a>
+		<div class="clear"></div>
+	</div>
+	<!--图集轮播 -->
+	<div class="tuji_banner">
+		<!-- Swiper -->
+	    <div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide"><img src="images/tuji1.jpg" alt=""></div>
+	            <div class="swiper-slide"><img src="images/tuji_banner1.jpg" alt=""></div>
+	            <div class="swiper-slide"><img src="images/tuji_banner1.jpg" alt=""></div>
+	            <div class="swiper-slide"><img src="images/tuji_banner1.jpg" alt=""></div>
+	            <div class="swiper-slide"><img src="images/tuji_banner1.jpg" alt=""></div>	            	          
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="tuji_name"><div class="swiper-pagination" style="margin-bottom:.26rem"></div>
+		        <h1 class="pic-tit">日本樱花大道  梦幻开始</h1>
+				<p class="pic-time">2016/03/02&nbsp 06:53</p>
+			</div>>
+	    </div>
+	    
+		<!-- 轮播图片对应的内容 -->
+		<div class="pic-con">
+			<ul>
+				<li>樱花树在分类学上属于樱桃亚属中的其中一部分植物。樱花树照片集锦樱花树照片集锦 (17张)			作为春天的象征，在春天樱花树上会开出由白色、淡红色转变成深红色的花。樱花树在分类学上属于樱桃亚属中的其中一部分植物。樱花树照片集锦樱花树照片集锦 (17张)			作为春天的象征，在春天樱花树上会开出由白色、淡红色转变成深红色的花。
+				樱花树在分类学上属于樱桃亚属中的其中一部分植物。樱花树照片集锦樱花树照片集锦 (17张)			作为春天的象征，在春天樱花树上会开出由白色、淡红色转变成深红色的花。樱花树在分类学上属于樱桃亚属中的其中一部分植物。樱花树照片集锦樱花树照片集锦 (17张)			作为春天的象征，在春天樱花树上会开出由白色、淡红色转变成深红色的花。
+				</li>
+				<li>樱花树照片集锦樱花树照片集锦 (17张)	
+				</li>
+				<li>淡红色转变成深红色的花。
+				</li>
+				<li>，在春天樱花树上会开出由白色、淡红色转变成深红色的花。
+				</li>
+				<li>属中的其中一部分植物。作为春天的象征，在春天樱花树上会开出由白色、淡红色转变成深红色的花。
+				</li>
+			</ul>
+		</div>
+    <!-- Initialize Swiper -->
+	    <script>
+	    var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        autoHeight: true,
+	        paginationType : 'fraction',
+	        onSlideChangeEnd: function(swiper){
+	            $('.pic-con li').css('display','none');
+	        	var index=$('.swiper-wrapper').find('.swiper-slide-active').index();
+	        	$('.pic-con li').eq(index).css('display','block');
+	        }
+	    });
+	    </script>	    
+	</div>
+</body>
+</html>
